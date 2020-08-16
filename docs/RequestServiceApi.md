@@ -9,10 +9,11 @@ Method | HTTP request | Description
 [**create_new_request**](RequestServiceApi.md#create_new_request) | **POST** /requests | Endpoint used to create a new Analysis Request.
 [**get_actions**](RequestServiceApi.md#get_actions) | **GET** /requests/actions | 
 [**get_agent**](RequestServiceApi.md#get_agent) | **GET** /requests/{uuid}/agent | Is called from the APE to request all parked datasets.
-[**get_all_requests**](RequestServiceApi.md#get_all_requests) | **GET** /requests | Returns UUIDs of existing analyses.
+[**get_all_requests2**](RequestServiceApi.md#get_all_requests2) | **GET** /requests | Returns UUIDs of existing analyses.
 [**get_data**](RequestServiceApi.md#get_data) | **GET** /requests/{uuid}/data | Is called from the APE to request all parked datasets.
 [**get_request**](RequestServiceApi.md#get_request) | **GET** /requests/{uuid} | Returns the details for certain Request.
 [**get_result**](RequestServiceApi.md#get_result) | **GET** /requests/{uuid}/result | Can be called from creator to request the AnalysisResult.
+[**get_status**](RequestServiceApi.md#get_status) | **GET** /requests/stats | 
 [**give_consent**](RequestServiceApi.md#give_consent) | **POST** /requests/{uuid}/consent | Used to give consent for request.
 [**init_request_parameters**](RequestServiceApi.md#init_request_parameters) | **POST** /requests/{uuid} | Endpoint used initialized addition datacollection parameters for requester.
 [**set_agent**](RequestServiceApi.md#set_agent) | **POST** /requests/{uuid}/agent | Is called from the APE to request all parked datasets.
@@ -20,7 +21,7 @@ Method | HTTP request | Description
 
 
 # **add_data**
-> JsonAnalysis add_data(uuid, authorization=authorization, body=body)
+> file add_data(uuid, authorization=authorization, body=body)
 
 Is used to upload and park the data till the AnalysisRequest gets processed.
 
@@ -61,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**JsonAnalysis**](JsonAnalysis.md)
+**file**
 
 ### Authorization
 
@@ -83,7 +84,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cancel_processing**
-> JsonAnalysis cancel_processing(uuid, authorization=authorization, body=body)
+> file cancel_processing(uuid, authorization=authorization, body=body)
 
 Endpoint is called from the Analysis Processing entity to submit the result.
 
@@ -124,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**JsonAnalysis**](JsonAnalysis.md)
+**file**
 
 ### Authorization
 
@@ -322,8 +323,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_all_requests**
-> file get_all_requests(authorization=authorization, created=created, history=history, limit=limit, new=new, offset=offset, preview=preview, ready=ready)
+# **get_all_requests2**
+> file get_all_requests2(authorization=authorization, created=created, history=history, limit=limit, new=new, offset=offset, preview=preview, ready=ready)
 
 Returns UUIDs of existing analyses.
 
@@ -353,10 +354,10 @@ ready = 'false' # str |  (optional) (default to 'false')
 
     try:
         # Returns UUIDs of existing analyses.
-        api_response = api_instance.get_all_requests(authorization=authorization, created=created, history=history, limit=limit, new=new, offset=offset, preview=preview, ready=ready)
+        api_response = api_instance.get_all_requests2(authorization=authorization, created=created, history=history, limit=limit, new=new, offset=offset, preview=preview, ready=ready)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling RequestServiceApi->get_all_requests: %s\n" % e)
+        print("Exception when calling RequestServiceApi->get_all_requests2: %s\n" % e)
 ```
 
 ### Parameters
@@ -456,7 +457,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_request**
-> JsonAnalysis get_request(uuid, authorization=authorization)
+> file get_request(uuid, authorization=authorization)
 
 Returns the details for certain Request.
 
@@ -495,7 +496,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**JsonAnalysis**](JsonAnalysis.md)
+**file**
 
 ### Authorization
 
@@ -515,7 +516,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_result**
-> JsonAnalysisResult get_result(uuid, authorization=authorization)
+> file get_result(uuid, authorization=authorization)
 
 Can be called from creator to request the AnalysisResult.
 
@@ -554,7 +555,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**JsonAnalysisResult**](JsonAnalysisResult.md)
+**file**
 
 ### Authorization
 
@@ -576,8 +577,57 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_status**
+> file get_status()
+
+
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import madana_sampleclient_python
+from madana_sampleclient_python.rest import ApiException
+from pprint import pprint
+
+# Enter a context with an instance of the API client
+with madana_sampleclient_python.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = madana_sampleclient_python.RequestServiceApi(api_client)
+    
+    try:
+        api_response = api_instance.get_status()
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling RequestServiceApi->get_status: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**file**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **give_consent**
-> JsonAnalysis give_consent(uuid, authorization=authorization)
+> file give_consent(uuid, authorization=authorization)
 
 Used to give consent for request.
 
@@ -616,7 +666,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**JsonAnalysis**](JsonAnalysis.md)
+**file**
 
 ### Authorization
 
@@ -762,7 +812,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set_result**
-> JsonAnalysis set_result(uuid, authorization=authorization, body=body)
+> file set_result(uuid, authorization=authorization, body=body)
 
 Endpoint is called from the Analysis Processing entity to submit the result.
 
@@ -803,7 +853,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**JsonAnalysis**](JsonAnalysis.md)
+**file**
 
 ### Authorization
 

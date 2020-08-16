@@ -4,12 +4,13 @@ All URIs are relative to *http://api.madana.io/rest*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**get_bootstrap**](NodeServiceApi.md#get_bootstrap) | **GET** /nodes/bootstrap | 
 [**get_nodes2**](NodeServiceApi.md#get_nodes2) | **GET** /nodes | 
 [**post_node_info**](NodeServiceApi.md#post_node_info) | **POST** /nodes | 
 
 
-# **get_nodes2**
-> file get_nodes2()
+# **get_bootstrap**
+> file get_bootstrap()
 
 
 
@@ -28,14 +29,67 @@ with madana_sampleclient_python.ApiClient() as api_client:
     api_instance = madana_sampleclient_python.NodeServiceApi(api_client)
     
     try:
-        api_response = api_instance.get_nodes2()
+        api_response = api_instance.get_bootstrap()
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling NodeServiceApi->get_bootstrap: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**file**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_nodes2**
+> file get_nodes2(owner=owner)
+
+
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import madana_sampleclient_python
+from madana_sampleclient_python.rest import ApiException
+from pprint import pprint
+
+# Enter a context with an instance of the API client
+with madana_sampleclient_python.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = madana_sampleclient_python.NodeServiceApi(api_client)
+    owner = 'owner_example' # str |  (optional)
+
+    try:
+        api_response = api_instance.get_nodes2(owner=owner)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling NodeServiceApi->get_nodes2: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **owner** | **str**|  | [optional] 
 
 ### Return type
 
