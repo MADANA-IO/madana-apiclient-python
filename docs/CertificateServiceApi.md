@@ -1,4 +1,4 @@
-# madana_sampleclient_python.CertificateServiceApi
+# madana_apiclient.CertificateServiceApi
 
 All URIs are relative to *http://api.madana.io/rest*
 
@@ -21,15 +21,15 @@ Issues certificates for logged-in users
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.CertificateServiceApi(api_client)
-    body = madana_sampleclient_python.JsonMDNData() # JsonMDNData |  (optional)
+    api_instance = madana_apiclient.CertificateServiceApi(api_client)
+    body = madana_apiclient.JsonMDNData() # JsonMDNData |  (optional)
 
     try:
         # Issues certificates for logged-in users.
@@ -77,14 +77,14 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.CertificateServiceApi(api_client)
+    api_instance = madana_apiclient.CertificateServiceApi(api_client)
     
     try:
         api_response = api_instance.get_certificate()
@@ -126,14 +126,14 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.CertificateServiceApi(api_client)
+    api_instance = madana_apiclient.CertificateServiceApi(api_client)
     fingerprint = 'fingerprint_example' # str | 
 
     try:

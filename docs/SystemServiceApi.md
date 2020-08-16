@@ -1,4 +1,4 @@
-# madana_sampleclient_python.SystemServiceApi
+# madana_apiclient.SystemServiceApi
 
 All URIs are relative to *http://api.madana.io/rest*
 
@@ -18,14 +18,14 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.SystemServiceApi(api_client)
+    api_instance = madana_apiclient.SystemServiceApi(api_client)
     
     try:
         api_response = api_instance.get_all_objects()
@@ -69,14 +69,14 @@ Return the current application usage
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.SystemServiceApi(api_client)
+    api_instance = madana_apiclient.SystemServiceApi(api_client)
     
     try:
         # Return the current application usage.

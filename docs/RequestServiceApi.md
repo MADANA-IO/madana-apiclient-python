@@ -1,4 +1,4 @@
-# madana_sampleclient_python.RequestServiceApi
+# madana_apiclient.RequestServiceApi
 
 All URIs are relative to *http://api.madana.io/rest*
 
@@ -32,17 +32,17 @@ Is used to upload and park the data till the AnalysisRequest gets processed
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.RequestServiceApi(api_client)
+    api_instance = madana_apiclient.RequestServiceApi(api_client)
     uuid = 'uuid_example' # str | 
 authorization = 'authorization_example' # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
-body = madana_sampleclient_python.JsonSignedData() # JsonSignedData |  (optional)
+body = madana_apiclient.JsonSignedData() # JsonSignedData |  (optional)
 
     try:
         # Is used to upload and park the data till the AnalysisRequest gets processed.
@@ -95,17 +95,17 @@ Endpoint is called from the Analysis Processing entity to submit the result
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.RequestServiceApi(api_client)
+    api_instance = madana_apiclient.RequestServiceApi(api_client)
     uuid = 'uuid_example' # str | 
 authorization = 'authorization_example' # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
-body = madana_sampleclient_python.JsonSignedData() # JsonSignedData |  (optional)
+body = madana_apiclient.JsonSignedData() # JsonSignedData |  (optional)
 
     try:
         # Endpoint is called from the Analysis Processing entity to submit the result.
@@ -158,16 +158,16 @@ Endpoint used to create a new Analysis Request
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.RequestServiceApi(api_client)
+    api_instance = madana_apiclient.RequestServiceApi(api_client)
     authorization = 'authorization_example' # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
-body = madana_sampleclient_python.JsonSignedData() # JsonSignedData |  (optional)
+body = madana_apiclient.JsonSignedData() # JsonSignedData |  (optional)
 
     try:
         # Endpoint used to create a new Analysis Request.
@@ -216,14 +216,14 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.RequestServiceApi(api_client)
+    api_instance = madana_apiclient.RequestServiceApi(api_client)
     limit = '30' # str |  (optional) (default to '30')
 offset = '0' # str |  (optional) (default to '0')
 
@@ -273,14 +273,14 @@ Is called from the APE to request all parked datasets. Returns the transmitted d
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.RequestServiceApi(api_client)
+    api_instance = madana_apiclient.RequestServiceApi(api_client)
     uuid = 'uuid_example' # str | 
 authorization = 'authorization_example' # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
 
@@ -335,14 +335,14 @@ Returns UUIDs of existing analyses.
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.RequestServiceApi(api_client)
+    api_instance = madana_apiclient.RequestServiceApi(api_client)
     authorization = 'authorization_example' # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
 created = 'false' # str | - if Queryparam \"created=true\" only the UUIDs of own Requests are shown (optional) (default to 'false')
 history = 'false' # str | - if queryparam \"history\" is set to true, endpoint returns all user actions. False per default. (optional) (default to 'false')
@@ -406,14 +406,14 @@ Is called from the APE to request all parked datasets. Returns the transmitted d
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.RequestServiceApi(api_client)
+    api_instance = madana_apiclient.RequestServiceApi(api_client)
     uuid = 'uuid_example' # str | 
 authorization = 'authorization_example' # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
 
@@ -468,14 +468,14 @@ Returns the details for certain Request. When requesting an analysis a view of t
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.RequestServiceApi(api_client)
+    api_instance = madana_apiclient.RequestServiceApi(api_client)
     uuid = 'uuid_example' # str | 
 authorization = 'authorization_example' # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
 
@@ -527,14 +527,14 @@ Can be called from creator to request the AnalysisResult.
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.RequestServiceApi(api_client)
+    api_instance = madana_apiclient.RequestServiceApi(api_client)
     uuid = 'uuid_example' # str | 
 authorization = 'authorization_example' # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
 
@@ -587,14 +587,14 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.RequestServiceApi(api_client)
+    api_instance = madana_apiclient.RequestServiceApi(api_client)
     
     try:
         api_response = api_instance.get_status()
@@ -638,14 +638,14 @@ Used to give consent for request. If the Endpoint is called from the creator of 
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.RequestServiceApi(api_client)
+    api_instance = madana_apiclient.RequestServiceApi(api_client)
     uuid = 'uuid_example' # str | 
 authorization = 'authorization_example' # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
 
@@ -699,14 +699,14 @@ Endpoint used initialized addition datacollection parameters for requester
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.RequestServiceApi(api_client)
+    api_instance = madana_apiclient.RequestServiceApi(api_client)
     uuid = 'uuid_example' # str | 
 authorization = 'authorization_example' # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
 body = 'body_example' # str |  (optional)
@@ -761,14 +761,14 @@ Is called from the APE to request all parked datasets. Returns the transmitted d
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.RequestServiceApi(api_client)
+    api_instance = madana_apiclient.RequestServiceApi(api_client)
     uuid = 'uuid_example' # str | 
 authorization = 'authorization_example' # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
 
@@ -823,17 +823,17 @@ Endpoint is called from the Analysis Processing entity to submit the result
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.RequestServiceApi(api_client)
+    api_instance = madana_apiclient.RequestServiceApi(api_client)
     uuid = 'uuid_example' # str | 
 authorization = 'authorization_example' # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
-body = madana_sampleclient_python.JsonSignedData() # JsonSignedData |  (optional)
+body = madana_apiclient.JsonSignedData() # JsonSignedData |  (optional)
 
     try:
         # Endpoint is called from the Analysis Processing entity to submit the result.

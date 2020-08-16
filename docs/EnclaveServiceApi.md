@@ -1,4 +1,4 @@
-# madana_sampleclient_python.EnclaveServiceApi
+# madana_apiclient.EnclaveServiceApi
 
 All URIs are relative to *http://api.madana.io/rest*
 
@@ -24,16 +24,16 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.EnclaveServiceApi(api_client)
+    api_instance = madana_apiclient.EnclaveServiceApi(api_client)
     uuid = 'uuid_example' # str | 
-body = madana_sampleclient_python.JsonEnclaveRunningAttestationApproval() # JsonEnclaveRunningAttestationApproval |  (optional)
+body = madana_apiclient.JsonEnclaveRunningAttestationApproval() # JsonEnclaveRunningAttestationApproval |  (optional)
 
     try:
         api_response = api_instance.approve_enclave(uuid, body=body)
@@ -79,16 +79,16 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.EnclaveServiceApi(api_client)
+    api_instance = madana_apiclient.EnclaveServiceApi(api_client)
     uuid = 'uuid_example' # str | 
-body = madana_sampleclient_python.JsonNodeInfo() # JsonNodeInfo |  (optional)
+body = madana_apiclient.JsonNodeInfo() # JsonNodeInfo |  (optional)
 
     try:
         api_response = api_instance.assign_enclave_agent(uuid, body=body)
@@ -134,16 +134,16 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.EnclaveServiceApi(api_client)
+    api_instance = madana_apiclient.EnclaveServiceApi(api_client)
     uuid = 'uuid_example' # str | 
-body = madana_sampleclient_python.JsonEnclaveRunningAttestation() # JsonEnclaveRunningAttestation |  (optional)
+body = madana_apiclient.JsonEnclaveRunningAttestation() # JsonEnclaveRunningAttestation |  (optional)
 
     try:
         api_response = api_instance.attestate_enclave(uuid, body=body)
@@ -189,15 +189,15 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.EnclaveServiceApi(api_client)
-    body = madana_sampleclient_python.JsonEnclaveRunRequest() # JsonEnclaveRunRequest |  (optional)
+    api_instance = madana_apiclient.EnclaveServiceApi(api_client)
+    body = madana_apiclient.JsonEnclaveRunRequest() # JsonEnclaveRunRequest |  (optional)
 
     try:
         api_response = api_instance.create_enclave_run_request(body=body)
@@ -242,14 +242,14 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.EnclaveServiceApi(api_client)
+    api_instance = madana_apiclient.EnclaveServiceApi(api_client)
     uuid = 'uuid_example' # str | 
 
     try:
@@ -295,14 +295,14 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.EnclaveServiceApi(api_client)
+    api_instance = madana_apiclient.EnclaveServiceApi(api_client)
     
     try:
         api_response = api_instance.get_enclave_types()
@@ -346,14 +346,14 @@ Returns UUIDs of existing analyses.
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.EnclaveServiceApi(api_client)
+    api_instance = madana_apiclient.EnclaveServiceApi(api_client)
     authorization = 'authorization_example' # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
 created = 'true' # str | - if Queryparam \"created=true\" only the UUIDs of own Requests are shown (optional) (default to 'true')
 limit = '30' # str | Used for offset pagination. Limit/Offset Paging would look like GET /request?limit=20&offset=100. This query would return the 20 rows starting with the 100th row (optional) (default to '30')
@@ -409,14 +409,14 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.EnclaveServiceApi(api_client)
+    api_instance = madana_apiclient.EnclaveServiceApi(api_client)
     uuid = 'uuid_example' # str | 
 
     try:

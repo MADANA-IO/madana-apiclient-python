@@ -8,7 +8,7 @@ stages:
   script:
    - pip install -r requirements.txt
    - pip install -r test-requirements.txt
-   - pytest --cov=madana_sampleclient_python
+   - pytest --cov=madana_apiclient
 
 nosetest-2.7:
   extends: .nosetest

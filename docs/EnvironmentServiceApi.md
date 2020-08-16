@@ -1,4 +1,4 @@
-# madana_sampleclient_python.EnvironmentServiceApi
+# madana_apiclient.EnvironmentServiceApi
 
 All URIs are relative to *http://api.madana.io/rest*
 
@@ -25,14 +25,14 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.EnvironmentServiceApi(api_client)
+    api_instance = madana_apiclient.EnvironmentServiceApi(api_client)
     uuid = 'uuid_example' # str | 
 
     try:
@@ -78,14 +78,14 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.EnvironmentServiceApi(api_client)
+    api_instance = madana_apiclient.EnvironmentServiceApi(api_client)
     uuid = 'uuid_example' # str | 
 
     try:
@@ -133,14 +133,14 @@ Returns UUIDs of existing analyses.
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.EnvironmentServiceApi(api_client)
+    api_instance = madana_apiclient.EnvironmentServiceApi(api_client)
     authorization = 'authorization_example' # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
 created = 'true' # str | - if Queryparam \"created=true\" only the UUIDs of own Requests are shown (optional) (default to 'true')
 limit = '30' # str | Used for offset pagination. Limit/Offset Paging would look like GET /request?limit=20&offset=100. This query would return the 20 rows starting with the 100th row (optional) (default to '30')
@@ -196,14 +196,14 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.EnvironmentServiceApi(api_client)
+    api_instance = madana_apiclient.EnvironmentServiceApi(api_client)
     uuid = 'uuid_example' # str | 
 
     try:
@@ -249,14 +249,14 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.EnvironmentServiceApi(api_client)
+    api_instance = madana_apiclient.EnvironmentServiceApi(api_client)
     limit = '30' # str |  (optional) (default to '30')
 name = 'name_example' # str |  (optional)
 offset = '0' # str |  (optional) (default to '0')
@@ -306,14 +306,14 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.EnvironmentServiceApi(api_client)
+    api_instance = madana_apiclient.EnvironmentServiceApi(api_client)
     limit = '30' # str |  (optional) (default to '30')
 offset = '0' # str |  (optional) (default to '0')
 
@@ -361,15 +361,15 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.EnvironmentServiceApi(api_client)
-    body = madana_sampleclient_python.JsonEnvironmentPublishingRequest() # JsonEnvironmentPublishingRequest |  (optional)
+    api_instance = madana_apiclient.EnvironmentServiceApi(api_client)
+    body = madana_apiclient.JsonEnvironmentPublishingRequest() # JsonEnvironmentPublishingRequest |  (optional)
 
     try:
         api_response = api_instance.publish_environment(body=body)
@@ -414,14 +414,14 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.EnvironmentServiceApi(api_client)
+    api_instance = madana_apiclient.EnvironmentServiceApi(api_client)
     uuid = 'uuid_example' # str | 
 
     try:
@@ -467,16 +467,16 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.EnvironmentServiceApi(api_client)
+    api_instance = madana_apiclient.EnvironmentServiceApi(api_client)
     uuid = 'uuid_example' # str | 
-body = madana_sampleclient_python.JsonEnvironment() # JsonEnvironment |  (optional)
+body = madana_apiclient.JsonEnvironment() # JsonEnvironment |  (optional)
 
     try:
         api_response = api_instance.update_environment(uuid, body=body)

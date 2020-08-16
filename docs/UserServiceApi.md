@@ -1,4 +1,4 @@
-# madana_sampleclient_python.UserServiceApi
+# madana_apiclient.UserServiceApi
 
 All URIs are relative to *http://api.madana.io/rest*
 
@@ -27,16 +27,16 @@ Creates a new user object
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.UserServiceApi(api_client)
+    api_instance = madana_apiclient.UserServiceApi(api_client)
     referrer = 'referrer_example' # str |  (optional)
-body = madana_sampleclient_python.JsonMDNUser() # JsonMDNUser | provided user object inheriting properties and credentials (optional)
+body = madana_apiclient.JsonMDNUser() # JsonMDNUser | provided user object inheriting properties and credentials (optional)
 
     try:
         # Creates a new user object.
@@ -85,14 +85,14 @@ Deletes an User based on the provided id and securitycontext
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.UserServiceApi(api_client)
+    api_instance = madana_apiclient.UserServiceApi(api_client)
     username = 'username_example' # str | 
 
     try:
@@ -141,14 +141,14 @@ Deletes linked account from the user and securitycontext
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.UserServiceApi(api_client)
+    api_instance = madana_apiclient.UserServiceApi(api_client)
     ident = 'ident_example' # str | 
 platform = 'platform_example' # str | 
 username = 'username_example' # str | 
@@ -199,14 +199,14 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.UserServiceApi(api_client)
+    api_instance = madana_apiclient.UserServiceApi(api_client)
     username = 'username_example' # str | 
 
     try:
@@ -252,14 +252,14 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.UserServiceApi(api_client)
+    api_instance = madana_apiclient.UserServiceApi(api_client)
     username = 'username_example' # str | 
 
     try:
@@ -305,14 +305,14 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.UserServiceApi(api_client)
+    api_instance = madana_apiclient.UserServiceApi(api_client)
     username = 'username_example' # str | 
 
     try:
@@ -358,16 +358,16 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.UserServiceApi(api_client)
+    api_instance = madana_apiclient.UserServiceApi(api_client)
     username = 'username_example' # str | 
-body = madana_sampleclient_python.JsonMDNUserProfileImage() # JsonMDNUserProfileImage |  (optional)
+body = madana_apiclient.JsonMDNUserProfileImage() # JsonMDNUserProfileImage |  (optional)
 
     try:
         api_response = api_instance.set_avatar(username, body=body)
@@ -413,16 +413,16 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.UserServiceApi(api_client)
+    api_instance = madana_apiclient.UserServiceApi(api_client)
     username = 'username_example' # str | 
-body = madana_sampleclient_python.JsonMDNUserSetting() # JsonMDNUserSetting |  (optional)
+body = madana_apiclient.JsonMDNUserSetting() # JsonMDNUserSetting |  (optional)
 
     try:
         api_response = api_instance.set_settings(username, body=body)
@@ -470,16 +470,16 @@ Updates Userproperties based on the provided user object
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.UserServiceApi(api_client)
+    api_instance = madana_apiclient.UserServiceApi(api_client)
     username = 'username_example' # str | 
-body = madana_sampleclient_python.JsonMDNUser() # JsonMDNUser | the new user object inherting all properties that should be change (optional)
+body = madana_apiclient.JsonMDNUser() # JsonMDNUser | the new user object inherting all properties that should be change (optional)
 
     try:
         # Updates Userproperties based on the provided user object.

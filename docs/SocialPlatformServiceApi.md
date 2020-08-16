@@ -1,4 +1,4 @@
-# madana_sampleclient_python.SocialPlatformServiceApi
+# madana_apiclient.SocialPlatformServiceApi
 
 All URIs are relative to *http://api.madana.io/rest*
 
@@ -21,14 +21,14 @@ Used to Handle Incoming Webhooks from Facebook
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.SocialPlatformServiceApi(api_client)
+    api_instance = madana_apiclient.SocialPlatformServiceApi(api_client)
     body = 'body_example' # str |  (optional)
 
     try:
@@ -77,14 +77,14 @@ Used to Handle Incoming Webhooks from Facebook
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.SocialPlatformServiceApi(api_client)
+    api_instance = madana_apiclient.SocialPlatformServiceApi(api_client)
     body = 'body_example' # str |  (optional)
 
     try:
@@ -133,14 +133,14 @@ Used to Handle Incoming Webhooks from Twitter
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.SocialPlatformServiceApi(api_client)
+    api_instance = madana_apiclient.SocialPlatformServiceApi(api_client)
     crc_token = 'crc_token_example' # str |  (optional)
 
     try:

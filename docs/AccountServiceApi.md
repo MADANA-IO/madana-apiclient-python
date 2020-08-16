@@ -1,4 +1,4 @@
-# madana_sampleclient_python.AccountServiceApi
+# madana_apiclient.AccountServiceApi
 
 All URIs are relative to *http://api.madana.io/rest*
 
@@ -20,14 +20,14 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.AccountServiceApi(api_client)
+    api_instance = madana_apiclient.AccountServiceApi(api_client)
     token = 'token_example' # str | 
 
     try:
@@ -75,15 +75,15 @@ Sends an Password reset mail to the given MailAddress
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.AccountServiceApi(api_client)
-    body = madana_sampleclient_python.JsonMDNMailAddress() # JsonMDNMailAddress | - the MaiAddress under which the user has signed up (optional)
+    api_instance = madana_apiclient.AccountServiceApi(api_client)
+    body = madana_apiclient.JsonMDNMailAddress() # JsonMDNMailAddress | - the MaiAddress under which the user has signed up (optional)
 
     try:
         # Sends an Password reset mail to the given MailAddress.
@@ -131,14 +131,14 @@ Used to request a new  activation-mail for the user
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.AccountServiceApi(api_client)
+    api_instance = madana_apiclient.AccountServiceApi(api_client)
     
     try:
         # Used to request a new  activation-mail for the user.
@@ -184,15 +184,15 @@ Receives the Password reset and tries to set the provided password for the user.
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.AccountServiceApi(api_client)
-    body = madana_sampleclient_python.JsonMDNPasswordReset() # JsonMDNPasswordReset | - the MDN_PasswordReset Object (optional)
+    api_instance = madana_apiclient.AccountServiceApi(api_client)
+    body = madana_apiclient.JsonMDNPasswordReset() # JsonMDNPasswordReset | - the MDN_PasswordReset Object (optional)
 
     try:
         # Receives the Password reset and tries to set the provided password for the user.

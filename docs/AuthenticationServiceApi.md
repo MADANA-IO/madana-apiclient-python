@@ -1,4 +1,4 @@
-# madana_sampleclient_python.AuthenticationServiceApi
+# madana_apiclient.AuthenticationServiceApi
 
 All URIs are relative to *http://api.madana.io/rest*
 
@@ -29,15 +29,15 @@ Authenticates a new application and returns the token
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.AuthenticationServiceApi(api_client)
-    body = madana_sampleclient_python.JsonMDNCertificate() # JsonMDNCertificate | the credentials used to validate the user (optional)
+    api_instance = madana_apiclient.AuthenticationServiceApi(api_client)
+    body = madana_apiclient.JsonMDNCertificate() # JsonMDNCertificate | the credentials used to validate the user (optional)
 
     try:
         # Authenticates a new application and returns the token.
@@ -86,16 +86,16 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.AuthenticationServiceApi(api_client)
+    api_instance = madana_apiclient.AuthenticationServiceApi(api_client)
     wallet = 'wallet_example' # str | the wallet which should be authenticated
-body = madana_sampleclient_python.JsonMDNOAuthToken() # JsonMDNOAuthToken | Token containing nonce and signate (optional)
+body = madana_apiclient.JsonMDNOAuthToken() # JsonMDNOAuthToken | Token containing nonce and signate (optional)
 
     try:
         api_response = api_instance.authenticate_ethereum_wallet(wallet, body=body)
@@ -145,15 +145,15 @@ Authenticates a new user and returns the token (  forbidden if the credentials c
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.AuthenticationServiceApi(api_client)
-    body = madana_sampleclient_python.JsonMDNUserCredentials() # JsonMDNUserCredentials | the credentials used to validate the user (optional)
+    api_instance = madana_apiclient.AuthenticationServiceApi(api_client)
+    body = madana_apiclient.JsonMDNUserCredentials() # JsonMDNUserCredentials | the credentials used to validate the user (optional)
 
     try:
         # Authenticates a new user and returns the token (  forbidden if the credentials cannot be validated ).
@@ -201,16 +201,16 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.AuthenticationServiceApi(api_client)
+    api_instance = madana_apiclient.AuthenticationServiceApi(api_client)
     wallet = 'wallet_example' # str | the wallet which should be authenticated
-body = madana_sampleclient_python.JsonMDNOAuthToken() # JsonMDNOAuthToken | Token containing nonce and signate (optional)
+body = madana_apiclient.JsonMDNOAuthToken() # JsonMDNOAuthToken | Token containing nonce and signate (optional)
 
     try:
         api_response = api_instance.authenticate_with_ethereum_challenge(wallet, body=body)
@@ -260,14 +260,14 @@ Returns the AUthorization URL to verify a Twitter Accounts
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.AuthenticationServiceApi(api_client)
+    api_instance = madana_apiclient.AuthenticationServiceApi(api_client)
     
     try:
         # Returns the AUthorization URL to verify a Twitter Accounts.
@@ -312,14 +312,14 @@ Returns a nonce for the client which is used as content for the to be created si
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.AuthenticationServiceApi(api_client)
+    api_instance = madana_apiclient.AuthenticationServiceApi(api_client)
     wallet = 'wallet_example' # str | - wallet address as String * @HTTP 417 If the address is not valid
 authorization = 'authorization_example' # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
 
@@ -371,14 +371,14 @@ Used to validate the active connection with the API
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.AuthenticationServiceApi(api_client)
+    api_instance = madana_apiclient.AuthenticationServiceApi(api_client)
     
     try:
         # Used to validate the active connection with the API.
@@ -424,14 +424,14 @@ Returns the AUthorization URL to verify a Twitter Accounts
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.AuthenticationServiceApi(api_client)
+    api_instance = madana_apiclient.AuthenticationServiceApi(api_client)
     
     try:
         # Returns the AUthorization URL to verify a Twitter Accounts.
@@ -476,14 +476,14 @@ Used as Callback URL when users have successfully authorized their facbeook acco
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.AuthenticationServiceApi(api_client)
+    api_instance = madana_apiclient.AuthenticationServiceApi(api_client)
     body = 'body_example' # str |  (optional)
 
     try:
@@ -530,14 +530,14 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.AuthenticationServiceApi(api_client)
+    api_instance = madana_apiclient.AuthenticationServiceApi(api_client)
     body = 'body_example' # str |  (optional)
 
     try:
@@ -583,15 +583,15 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.AuthenticationServiceApi(api_client)
-    body = madana_sampleclient_python.JsonMDNOAuthToken() # JsonMDNOAuthToken |  (optional)
+    api_instance = madana_apiclient.AuthenticationServiceApi(api_client)
+    body = madana_apiclient.JsonMDNOAuthToken() # JsonMDNOAuthToken |  (optional)
 
     try:
         api_response = api_instance.set_twitter_uid(body=body)

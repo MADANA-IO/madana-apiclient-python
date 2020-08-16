@@ -1,4 +1,4 @@
-# madana_sampleclient_python.SocialServiceApi
+# madana_apiclient.SocialServiceApi
 
 All URIs are relative to *http://api.madana.io/rest*
 
@@ -22,14 +22,14 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.SocialServiceApi(api_client)
+    api_instance = madana_apiclient.SocialServiceApi(api_client)
     
     try:
         api_response = api_instance.get_my_profile()
@@ -73,14 +73,14 @@ Returns all Platforms / Systems that can be Connected to the MADANA Service
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.SocialServiceApi(api_client)
+    api_instance = madana_apiclient.SocialServiceApi(api_client)
     
     try:
         # Returns all Platforms / Systems that can be Connected to the MADANA Service.
@@ -125,14 +125,14 @@ Returns the Ranking by PTS within the System
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.SocialServiceApi(api_client)
+    api_instance = madana_apiclient.SocialServiceApi(api_client)
     
     try:
         # Returns the Ranking by PTS within the System.
@@ -175,14 +175,14 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.SocialServiceApi(api_client)
+    api_instance = madana_apiclient.SocialServiceApi(api_client)
     platform = 'platform_example' # str | 
 
     try:
@@ -228,14 +228,14 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.SocialServiceApi(api_client)
+    api_instance = madana_apiclient.SocialServiceApi(api_client)
     username = 'username_example' # str | 
 simple = 'false' # str |  (optional) (default to 'false')
 
@@ -283,14 +283,14 @@ No authorization required
 ```python
 from __future__ import print_function
 import time
-import madana_sampleclient_python
-from madana_sampleclient_python.rest import ApiException
+import madana_apiclient
+from madana_apiclient.rest import ApiException
 from pprint import pprint
 
 # Enter a context with an instance of the API client
-with madana_sampleclient_python.ApiClient() as api_client:
+with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_sampleclient_python.SocialServiceApi(api_client)
+    api_instance = madana_apiclient.SocialServiceApi(api_client)
     username = 'username_example' # str | 
 
     try:
