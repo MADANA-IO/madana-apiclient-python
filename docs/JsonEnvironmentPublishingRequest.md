@@ -4,13 +4,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | **str** |  | [optional] 
-**uuid** | **str** |  | [optional] 
 **ipfs_hash** | **str** |  | [optional] 
+**content** | **str** |  | [optional] 
 **size** | **str** |  | [optional] 
-**name** | **str** |  | [optional] 
 **packages** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
+**name** | **str** |  | [optional] 
+**uuid** | **str** |  | [optional] 
 **is_public** | **str** |  | [optional] 
 **ipfs_primary_peer** | **str** |  | [optional] 
 

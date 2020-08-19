@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created** | **str** |  | [optional] 
-**image** | **str** |  | [optional] 
 **activated** | **str** |  | [optional] 
+**image** | **str** |  | [optional] 
 **user_name** | **str** |  | [optional] 
 **last_active** | **str** |  | [optional] 
 
