@@ -5,9 +5,9 @@ All URIs are relative to *http://api.madana.io/rest*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**activate_user**](AccountServiceApi.md#activate_user) | **GET** /account/activation/{token} | 
-[**create_object**](AccountServiceApi.md#create_object) | **POST** /account/password | Sends an Password reset mail to the given MailAddress.
+[**create_password_reset**](AccountServiceApi.md#create_password_reset) | **POST** /account/password | Sends an Password reset mail to the given MailAddress.
 [**request_verification_mail**](AccountServiceApi.md#request_verification_mail) | **GET** /account/verifymail | Used to request a new  activation-mail for the user.
-[**update_object**](AccountServiceApi.md#update_object) | **PUT** /account/password | Receives the Password reset and tries to set the provided password for the user.
+[**update_password**](AccountServiceApi.md#update_password) | **PUT** /account/password | Receives the Password reset and tries to set the provided password for the user.
 
 
 # **activate_user**
@@ -63,8 +63,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_object**
-> file create_object(body=body)
+# **create_password_reset**
+> file create_password_reset(body=body)
 
 Sends an Password reset mail to the given MailAddress.
 
@@ -87,10 +87,10 @@ with madana_apiclient.ApiClient() as api_client:
 
     try:
         # Sends an Password reset mail to the given MailAddress.
-        api_response = api_instance.create_object(body=body)
+        api_response = api_instance.create_password_reset(body=body)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling AccountServiceApi->create_object: %s\n" % e)
+        print("Exception when calling AccountServiceApi->create_password_reset: %s\n" % e)
 ```
 
 ### Parameters
@@ -172,8 +172,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_object**
-> file update_object(body=body)
+# **update_password**
+> file update_password(body=body)
 
 Receives the Password reset and tries to set the provided password for the user.
 
@@ -196,10 +196,10 @@ with madana_apiclient.ApiClient() as api_client:
 
     try:
         # Receives the Password reset and tries to set the provided password for the user.
-        api_response = api_instance.update_object(body=body)
+        api_response = api_instance.update_password(body=body)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling AccountServiceApi->update_object: %s\n" % e)
+        print("Exception when calling AccountServiceApi->update_password: %s\n" % e)
 ```
 
 ### Parameters

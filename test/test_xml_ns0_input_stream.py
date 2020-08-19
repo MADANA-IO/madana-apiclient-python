@@ -16,11 +16,11 @@ import unittest
 import datetime
 
 import madana_apiclient
-from madana_apiclient.models.xml_ns0_enclave_running_attestation_all_of import XmlNs0EnclaveRunningAttestationAllOf  # noqa: E501
+from madana_apiclient.models.xml_ns0_input_stream import XmlNs0InputStream  # noqa: E501
 from madana_apiclient.rest import ApiException
 
-class TestXmlNs0EnclaveRunningAttestationAllOf(unittest.TestCase):
-    """XmlNs0EnclaveRunningAttestationAllOf unit test stubs"""
+class TestXmlNs0InputStream(unittest.TestCase):
+    """XmlNs0InputStream unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,22 +29,20 @@ class TestXmlNs0EnclaveRunningAttestationAllOf(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test XmlNs0EnclaveRunningAttestationAllOf
+        """Test XmlNs0InputStream
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = madana_apiclient.models.xml_ns0_enclave_running_attestation_all_of.XmlNs0EnclaveRunningAttestationAllOf()  # noqa: E501
+        # model = madana_apiclient.models.xml_ns0_input_stream.XmlNs0InputStream()  # noqa: E501
         if include_optional :
-            return XmlNs0EnclaveRunningAttestationAllOf(
-                enclave_process = null, 
-                node_info = null
+            return XmlNs0InputStream(
             )
         else :
-            return XmlNs0EnclaveRunningAttestationAllOf(
+            return XmlNs0InputStream(
         )
 
-    def testXmlNs0EnclaveRunningAttestationAllOf(self):
-        """Test XmlNs0EnclaveRunningAttestationAllOf"""
+    def testXmlNs0InputStream(self):
+        """Test XmlNs0InputStream"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

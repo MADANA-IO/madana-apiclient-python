@@ -4,7 +4,7 @@ All URIs are relative to *http://api.madana.io/rest*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_object2**](UserServiceApi.md#create_object2) | **POST** /users | Creates a new user object.
+[**create_object**](UserServiceApi.md#create_object) | **POST** /users | Creates a new user object.
 [**delete_object**](UserServiceApi.md#delete_object) | **DELETE** /users/{username} | Deletes an User based on the provided id and securitycontext.
 [**delete_object_0**](UserServiceApi.md#delete_object_0) | **DELETE** /users/{username}/social/{platform}/{ident} | Deletes linked account from the user and securitycontext.
 [**get_avatars**](UserServiceApi.md#get_avatars) | **GET** /users/{username}/avatars | 
@@ -12,11 +12,11 @@ Method | HTTP request | Description
 [**get_object2**](UserServiceApi.md#get_object2) | **GET** /users/{username} | 
 [**set_avatar**](UserServiceApi.md#set_avatar) | **POST** /users/{username}/avatars | 
 [**set_settings**](UserServiceApi.md#set_settings) | **POST** /users/{username}/settings | 
-[**update_object2**](UserServiceApi.md#update_object2) | **PUT** /users/{username} | Updates Userproperties based on the provided user object.
+[**update_object**](UserServiceApi.md#update_object) | **PUT** /users/{username} | Updates Userproperties based on the provided user object.
 
 
-# **create_object2**
-> file create_object2(referrer=referrer, body=body)
+# **create_object**
+> file create_object(referrer=referrer, body=body)
 
 Creates a new user object.
 
@@ -40,10 +40,10 @@ body = madana_apiclient.JsonMDNUser() # JsonMDNUser | provided user object inher
 
     try:
         # Creates a new user object.
-        api_response = api_instance.create_object2(referrer=referrer, body=body)
+        api_response = api_instance.create_object(referrer=referrer, body=body)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling UserServiceApi->create_object2: %s\n" % e)
+        print("Exception when calling UserServiceApi->create_object: %s\n" % e)
 ```
 
 ### Parameters
@@ -458,8 +458,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_object2**
-> file update_object2(username, body=body)
+# **update_object**
+> file update_object(username, body=body)
 
 Updates Userproperties based on the provided user object.
 
@@ -483,10 +483,10 @@ body = madana_apiclient.JsonMDNUser() # JsonMDNUser | the new user object inhert
 
     try:
         # Updates Userproperties based on the provided user object.
-        api_response = api_instance.update_object2(username, body=body)
+        api_response = api_instance.update_object(username, body=body)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling UserServiceApi->update_object2: %s\n" % e)
+        print("Exception when calling UserServiceApi->update_object: %s\n" % e)
 ```
 
 ### Parameters

@@ -5,8 +5,8 @@ All URIs are relative to *http://api.madana.io/rest*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**authenticate_certificate**](CertificateServiceApi.md#authenticate_certificate) | **POST** /certificates | Issues certificates for logged-in users.
-[**get_certificate**](CertificateServiceApi.md#get_certificate) | **GET** /certificates/root | 
-[**get_certificate_0**](CertificateServiceApi.md#get_certificate_0) | **GET** /certificates/{fingerprint} | 
+[**get_certificate_by_fingerprint**](CertificateServiceApi.md#get_certificate_by_fingerprint) | **GET** /certificates/{fingerprint} | 
+[**get_root_certificate**](CertificateServiceApi.md#get_root_certificate) | **GET** /certificates/root | 
 
 
 # **authenticate_certificate**
@@ -67,8 +67,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_certificate**
-> file get_certificate()
+# **get_certificate_by_fingerprint**
+> file get_certificate_by_fingerprint(fingerprint)
 
 
 
@@ -85,16 +85,20 @@ from pprint import pprint
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = madana_apiclient.CertificateServiceApi(api_client)
-    
+    fingerprint = 'fingerprint_example' # str | 
+
     try:
-        api_response = api_instance.get_certificate()
+        api_response = api_instance.get_certificate_by_fingerprint(fingerprint)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling CertificateServiceApi->get_certificate: %s\n" % e)
+        print("Exception when calling CertificateServiceApi->get_certificate_by_fingerprint: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fingerprint** | **str**|  | 
 
 ### Return type
 
@@ -116,8 +120,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_certificate_0**
-> file get_certificate_0(fingerprint)
+# **get_root_certificate**
+> file get_root_certificate()
 
 
 
@@ -134,20 +138,16 @@ from pprint import pprint
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = madana_apiclient.CertificateServiceApi(api_client)
-    fingerprint = 'fingerprint_example' # str | 
-
+    
     try:
-        api_response = api_instance.get_certificate_0(fingerprint)
+        api_response = api_instance.get_root_certificate()
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling CertificateServiceApi->get_certificate_0: %s\n" % e)
+        print("Exception when calling CertificateServiceApi->get_root_certificate: %s\n" % e)
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **fingerprint** | **str**|  | 
+This endpoint does not need any parameter.
 
 ### Return type
 
