@@ -4,6 +4,7 @@ All URIs are relative to *http://api.madana.io/rest*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**add_history**](EnclaveServiceApi.md#add_history) | **POST** /enclaves/{uuid}/history | 
 [**approve_enclave**](EnclaveServiceApi.md#approve_enclave) | **POST** /enclaves/{uuid}/approval | 
 [**assign_enclave_agent**](EnclaveServiceApi.md#assign_enclave_agent) | **POST** /enclaves/{uuid}/assign | 
 [**attestate_enclave**](EnclaveServiceApi.md#attestate_enclave) | **POST** /enclaves/{uuid}/attestation | 
@@ -13,6 +14,61 @@ Method | HTTP request | Description
 [**get_enclaves**](EnclaveServiceApi.md#get_enclaves) | **GET** /enclaves | Returns UUIDs of existing analyses.
 [**kill_enclave**](EnclaveServiceApi.md#kill_enclave) | **POST** /enclaves/{uuid}/kill | 
 
+
+# **add_history**
+> file add_history(uuid, body=body)
+
+
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import madana_apiclient
+from madana_apiclient.rest import ApiException
+from pprint import pprint
+
+# Enter a context with an instance of the API client
+with madana_apiclient.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = madana_apiclient.EnclaveServiceApi(api_client)
+    uuid = 'uuid_example' # str | 
+body = madana_apiclient.JsonSignedData() # JsonSignedData |  (optional)
+
+    try:
+        api_response = api_instance.add_history(uuid, body=body)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling EnclaveServiceApi->add_history: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uuid** | **str**|  | 
+ **body** | [**JsonSignedData**](JsonSignedData.md)|  | [optional] 
+
+### Return type
+
+**file**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/xml
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **approve_enclave**
 > file approve_enclave(uuid, body=body)

@@ -16,11 +16,11 @@ import unittest
 import datetime
 
 import madana_apiclient
-from madana_apiclient.models.xml_ns0_mdn_setting_all_of import XmlNs0MDNSettingAllOf  # noqa: E501
+from madana_apiclient.models.json_signed_data_utils import JsonSignedDataUtils  # noqa: E501
 from madana_apiclient.rest import ApiException
 
-class TestXmlNs0MDNSettingAllOf(unittest.TestCase):
-    """XmlNs0MDNSettingAllOf unit test stubs"""
+class TestJsonSignedDataUtils(unittest.TestCase):
+    """JsonSignedDataUtils unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,23 +29,23 @@ class TestXmlNs0MDNSettingAllOf(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test XmlNs0MDNSettingAllOf
+        """Test JsonSignedDataUtils
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = madana_apiclient.models.xml_ns0_mdn_setting_all_of.XmlNs0MDNSettingAllOf()  # noqa: E501
+        # model = madana_apiclient.models.json_signed_data_utils.JsonSignedDataUtils()  # noqa: E501
         if include_optional :
-            return XmlNs0MDNSettingAllOf(
-                description = '0', 
-                id = '0', 
-                name = '0'
+            return JsonSignedDataUtils(
+                fingerpint = '0', 
+                signature = '0', 
+                data = '0'
             )
         else :
-            return XmlNs0MDNSettingAllOf(
+            return JsonSignedDataUtils(
         )
 
-    def testXmlNs0MDNSettingAllOf(self):
-        """Test XmlNs0MDNSettingAllOf"""
+    def testJsonSignedDataUtils(self):
+        """Test JsonSignedDataUtils"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

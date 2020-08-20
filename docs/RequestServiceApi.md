@@ -42,7 +42,7 @@ with madana_apiclient.ApiClient() as api_client:
     api_instance = madana_apiclient.RequestServiceApi(api_client)
     uuid = 'uuid_example' # str | 
 authorization = 'authorization_example' # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
-body = madana_apiclient.JsonSignedData() # JsonSignedData |  (optional)
+body = madana_apiclient.JsonSignedDataUtils() # JsonSignedDataUtils |  (optional)
 
     try:
         # Is used to upload and park the data till the AnalysisRequest gets processed.
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | **str**|  | 
  **authorization** | **str**| Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c | [optional] 
- **body** | [**JsonSignedData**](JsonSignedData.md)|  | [optional] 
+ **body** | [**JsonSignedDataUtils**](JsonSignedDataUtils.md)|  | [optional] 
 
 ### Return type
 
@@ -105,7 +105,7 @@ with madana_apiclient.ApiClient() as api_client:
     api_instance = madana_apiclient.RequestServiceApi(api_client)
     uuid = 'uuid_example' # str | 
 authorization = 'authorization_example' # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
-body = madana_apiclient.JsonSignedData() # JsonSignedData |  (optional)
+body = madana_apiclient.JsonSignedDataUtils() # JsonSignedDataUtils |  (optional)
 
     try:
         # Endpoint is called from the Analysis Processing entity to submit the result.
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | **str**|  | 
  **authorization** | **str**| Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c | [optional] 
- **body** | [**JsonSignedData**](JsonSignedData.md)|  | [optional] 
+ **body** | [**JsonSignedDataUtils**](JsonSignedDataUtils.md)|  | [optional] 
 
 ### Return type
 
@@ -167,7 +167,7 @@ with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = madana_apiclient.RequestServiceApi(api_client)
     authorization = 'authorization_example' # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
-body = madana_apiclient.JsonSignedData() # JsonSignedData |  (optional)
+body = madana_apiclient.JsonSignedDataUtils() # JsonSignedDataUtils |  (optional)
 
     try:
         # Endpoint used to create a new Analysis Request.
@@ -182,7 +182,7 @@ body = madana_apiclient.JsonSignedData() # JsonSignedData |  (optional)
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c | [optional] 
- **body** | [**JsonSignedData**](JsonSignedData.md)|  | [optional] 
+ **body** | [**JsonSignedDataUtils**](JsonSignedDataUtils.md)|  | [optional] 
 
 ### Return type
 
@@ -395,7 +395,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_data**
-> JsonSignedData get_data(uuid, authorization=authorization)
+> JsonSignedDataUtils get_data(uuid, authorization=authorization)
 
 Is called from the APE to request all parked datasets.
 
@@ -434,7 +434,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**JsonSignedData**](JsonSignedData.md)
+[**JsonSignedDataUtils**](JsonSignedDataUtils.md)
 
 ### Authorization
 
@@ -833,7 +833,7 @@ with madana_apiclient.ApiClient() as api_client:
     api_instance = madana_apiclient.RequestServiceApi(api_client)
     uuid = 'uuid_example' # str | 
 authorization = 'authorization_example' # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
-body = madana_apiclient.JsonSignedData() # JsonSignedData |  (optional)
+body = madana_apiclient.JsonSignedDataUtils() # JsonSignedDataUtils |  (optional)
 
     try:
         # Endpoint is called from the Analysis Processing entity to submit the result.
@@ -849,7 +849,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | **str**|  | 
  **authorization** | **str**| Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c | [optional] 
- **body** | [**JsonSignedData**](JsonSignedData.md)|  | [optional] 
+ **body** | [**JsonSignedDataUtils**](JsonSignedDataUtils.md)|  | [optional] 
 
 ### Return type
 
