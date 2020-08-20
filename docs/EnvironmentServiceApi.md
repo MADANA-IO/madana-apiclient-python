@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**delete_environment**](EnvironmentServiceApi.md#delete_environment) | **DELETE** /environments/{uuid} | 
 [**delete_environment_subscription**](EnvironmentServiceApi.md#delete_environment_subscription) | **DELETE** /environments/{uuid}/subscribe | 
-[**get_all_requests**](EnvironmentServiceApi.md#get_all_requests) | **GET** /environments | Returns UUIDs of existing analyses.
 [**get_environment**](EnvironmentServiceApi.md#get_environment) | **GET** /environments/{uuid} | 
+[**get_environments**](EnvironmentServiceApi.md#get_environments) | **GET** /environments | Returns UUIDs of existing analyses.
 [**get_published_environments**](EnvironmentServiceApi.md#get_published_environments) | **GET** /environments/published | 
 [**get_subscribed_environments**](EnvironmentServiceApi.md#get_subscribed_environments) | **GET** /environments/subscriptions | 
 [**publish_environment**](EnvironmentServiceApi.md#publish_environment) | **POST** /environments | 
@@ -121,71 +121,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_all_requests**
-> file get_all_requests(authorization=authorization, created=created, limit=limit, name=name, offset=offset)
-
-Returns UUIDs of existing analyses.
-
-Returns UUIDs of existing analyses.
-
-### Example
-
-```python
-from __future__ import print_function
-import time
-import madana_apiclient
-from madana_apiclient.rest import ApiException
-from pprint import pprint
-
-# Enter a context with an instance of the API client
-with madana_apiclient.ApiClient() as api_client:
-    # Create an instance of the API class
-    api_instance = madana_apiclient.EnvironmentServiceApi(api_client)
-    authorization = 'authorization_example' # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
-created = 'true' # str | - if Queryparam \"created=true\" only the UUIDs of own Requests are shown (optional) (default to 'true')
-limit = '30' # str | Used for offset pagination. Limit/Offset Paging would look like GET /request?limit=20&offset=100. This query would return the 20 rows starting with the 100th row (optional) (default to '30')
-name = 'name_example' # str |  (optional)
-offset = '0' # str | Used for offset pagination. Limit/Offset Paging would look like GET /request?limit=20&offset=100. This query would return the 20 rows starting with the 100th row (optional) (default to '0')
-
-    try:
-        # Returns UUIDs of existing analyses.
-        api_response = api_instance.get_all_requests(authorization=authorization, created=created, limit=limit, name=name, offset=offset)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling EnvironmentServiceApi->get_all_requests: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authorization** | **str**| Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c | [optional] 
- **created** | **str**| - if Queryparam \&quot;created&#x3D;true\&quot; only the UUIDs of own Requests are shown | [optional] [default to &#39;true&#39;]
- **limit** | **str**| Used for offset pagination. Limit/Offset Paging would look like GET /request?limit&#x3D;20&amp;offset&#x3D;100. This query would return the 20 rows starting with the 100th row | [optional] [default to &#39;30&#39;]
- **name** | **str**|  | [optional] 
- **offset** | **str**| Used for offset pagination. Limit/Offset Paging would look like GET /request?limit&#x3D;20&amp;offset&#x3D;100. This query would return the 20 rows starting with the 100th row | [optional] [default to &#39;0&#39;]
-
-### Return type
-
-**file**
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | If the actions could be loaded |  -  |
-**500** | If an servsided error occurs |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **get_environment**
 > file get_environment(uuid)
 
@@ -236,6 +171,71 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_environments**
+> file get_environments(authorization=authorization, created=created, limit=limit, name=name, offset=offset)
+
+Returns UUIDs of existing analyses.
+
+Returns UUIDs of existing analyses.
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import madana_apiclient
+from madana_apiclient.rest import ApiException
+from pprint import pprint
+
+# Enter a context with an instance of the API client
+with madana_apiclient.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = madana_apiclient.EnvironmentServiceApi(api_client)
+    authorization = 'authorization_example' # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
+created = 'true' # str | - if Queryparam \"created=true\" only the UUIDs of own Requests are shown (optional) (default to 'true')
+limit = '30' # str | Used for offset pagination. Limit/Offset Paging would look like GET /request?limit=20&offset=100. This query would return the 20 rows starting with the 100th row (optional) (default to '30')
+name = 'name_example' # str |  (optional)
+offset = '0' # str | Used for offset pagination. Limit/Offset Paging would look like GET /request?limit=20&offset=100. This query would return the 20 rows starting with the 100th row (optional) (default to '0')
+
+    try:
+        # Returns UUIDs of existing analyses.
+        api_response = api_instance.get_environments(authorization=authorization, created=created, limit=limit, name=name, offset=offset)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling EnvironmentServiceApi->get_environments: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **str**| Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c | [optional] 
+ **created** | **str**| - if Queryparam \&quot;created&#x3D;true\&quot; only the UUIDs of own Requests are shown | [optional] [default to &#39;true&#39;]
+ **limit** | **str**| Used for offset pagination. Limit/Offset Paging would look like GET /request?limit&#x3D;20&amp;offset&#x3D;100. This query would return the 20 rows starting with the 100th row | [optional] [default to &#39;30&#39;]
+ **name** | **str**|  | [optional] 
+ **offset** | **str**| Used for offset pagination. Limit/Offset Paging would look like GET /request?limit&#x3D;20&amp;offset&#x3D;100. This query would return the 20 rows starting with the 100th row | [optional] [default to &#39;0&#39;]
+
+### Return type
+
+**file**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | If the actions could be loaded |  -  |
+**500** | If an servsided error occurs |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

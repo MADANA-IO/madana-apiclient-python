@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**create_new_request**](RequestServiceApi.md#create_new_request) | **POST** /requests | Endpoint used to create a new Analysis Request.
 [**get_actions**](RequestServiceApi.md#get_actions) | **GET** /requests/actions | 
 [**get_agent**](RequestServiceApi.md#get_agent) | **GET** /requests/{uuid}/agent | Is called from the APE to request all parked datasets.
-[**get_all_requests2**](RequestServiceApi.md#get_all_requests2) | **GET** /requests | Returns UUIDs of existing analyses.
+[**get_all_requests**](RequestServiceApi.md#get_all_requests) | **GET** /requests | Returns UUIDs of existing analyses.
 [**get_data**](RequestServiceApi.md#get_data) | **GET** /requests/{uuid}/data | Is called from the APE to request all parked datasets.
 [**get_request**](RequestServiceApi.md#get_request) | **GET** /requests/{uuid} | Returns the details for certain Request.
 [**get_result**](RequestServiceApi.md#get_result) | **GET** /requests/{uuid}/result | Can be called from creator to request the AnalysisResult.
@@ -323,8 +323,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_all_requests2**
-> file get_all_requests2(authorization=authorization, created=created, history=history, limit=limit, new=new, offset=offset, preview=preview, ready=ready)
+# **get_all_requests**
+> file get_all_requests(authorization=authorization, created=created, history=history, limit=limit, new=new, offset=offset, preview=preview, ready=ready)
 
 Returns UUIDs of existing analyses.
 
@@ -354,10 +354,10 @@ ready = 'false' # str |  (optional) (default to 'false')
 
     try:
         # Returns UUIDs of existing analyses.
-        api_response = api_instance.get_all_requests2(authorization=authorization, created=created, history=history, limit=limit, new=new, offset=offset, preview=preview, ready=ready)
+        api_response = api_instance.get_all_requests(authorization=authorization, created=created, history=history, limit=limit, new=new, offset=offset, preview=preview, ready=ready)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling RequestServiceApi->get_all_requests2: %s\n" % e)
+        print("Exception when calling RequestServiceApi->get_all_requests: %s\n" % e)
 ```
 
 ### Parameters
