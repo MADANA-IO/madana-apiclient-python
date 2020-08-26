@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **internal_ident** | **str** |  | [optional] 
 **internal_remote_control_server** | **str** |  | [optional] 
 **process** | [**XmlNs0Process**](XmlNs0Process.md) |  | [optional] 
+**public_ident** | **str** |  | [optional] 
 **remote_control_server** | **str** |  | [optional] 
 **signer_ident** | **str** |  | [optional] 
 **startup_cmd** | **str** |  | [optional] 

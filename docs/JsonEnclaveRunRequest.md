@@ -4,8 +4,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**wireguard_public_key** | **str** |  | [optional] 
 **using_default_run_config** | **bool** |  | [optional] 
+**wireguard_public_key** | **str** |  | [optional] 
 **enclave_execution_type** | **str** |  | [optional] 
 **environment_uuid** | **str** |  | [optional] 
 
