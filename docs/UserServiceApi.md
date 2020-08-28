@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**delete_object_0**](UserServiceApi.md#delete_object_0) | **DELETE** /users/{username}/social/{platform}/{ident} | Deletes linked account from the user and securitycontext.
 [**get_avatars**](UserServiceApi.md#get_avatars) | **GET** /users/{username}/avatars | 
 [**get_certificates**](UserServiceApi.md#get_certificates) | **GET** /users/{username}/certificates | 
+[**get_enclave_history**](UserServiceApi.md#get_enclave_history) | **GET** /users/{username}/enclavehistory | 
 [**get_object2**](UserServiceApi.md#get_object2) | **GET** /users/{username} | 
 [**set_avatar**](UserServiceApi.md#set_avatar) | **POST** /users/{username}/avatars | 
 [**set_settings**](UserServiceApi.md#set_settings) | **POST** /users/{username}/settings | 
@@ -274,6 +275,63 @@ with madana_apiclient.ApiClient() as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **username** | **str**|  | 
+
+### Return type
+
+**file**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_enclave_history**
+> file get_enclave_history(username, limit=limit, offset=offset)
+
+
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import madana_apiclient
+from madana_apiclient.rest import ApiException
+from pprint import pprint
+
+# Enter a context with an instance of the API client
+with madana_apiclient.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = madana_apiclient.UserServiceApi(api_client)
+    username = 'username_example' # str | 
+limit = '30' # str |  (optional) (default to '30')
+offset = '0' # str |  (optional) (default to '0')
+
+    try:
+        api_response = api_instance.get_enclave_history(username, limit=limit, offset=offset)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling UserServiceApi->get_enclave_history: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **username** | **str**|  | 
+ **limit** | **str**|  | [optional] [default to &#39;30&#39;]
+ **offset** | **str**|  | [optional] [default to &#39;0&#39;]
 
 ### Return type
 
