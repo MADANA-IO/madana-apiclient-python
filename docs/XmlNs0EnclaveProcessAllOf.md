@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **internal_attesation_server** | **str** |  | [optional] 
 **internal_ident** | **str** |  | [optional] 
 **internal_remote_control_server** | **str** |  | [optional] 
+**internal_wireguard_server** | **str** |  | [optional] 
 **process** | [**XmlNs0Process**](XmlNs0Process.md) |  | [optional] 
 **public_ident** | **str** |  | [optional] 
 **remote_control_server** | **str** |  | [optional] 
@@ -21,6 +22,7 @@ Name | Type | Description | Notes
 **status** | **str** |  | [optional] 
 **wg_interface** | [**XmlNs0WireguardInterface**](XmlNs0WireguardInterface.md) |  | [optional] 
 **wireguard_public_key** | **str** |  | [optional] 
+**wireguard_server** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

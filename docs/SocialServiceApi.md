@@ -25,6 +25,12 @@ import time
 import madana_apiclient
 from madana_apiclient.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://api.madana.io/rest
+# See configuration.py for a list of all supported configuration parameters.
+configuration = madana_apiclient.Configuration(
+    host = "http://api.madana.io/rest"
+)
+
 
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
@@ -76,6 +82,12 @@ import time
 import madana_apiclient
 from madana_apiclient.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://api.madana.io/rest
+# See configuration.py for a list of all supported configuration parameters.
+configuration = madana_apiclient.Configuration(
+    host = "http://api.madana.io/rest"
+)
+
 
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
@@ -114,7 +126,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ranking**
-> file get_ranking()
+> file get_ranking(limit=limit, offset=offset)
 
 Returns the Ranking by PTS within the System.
 
@@ -128,22 +140,34 @@ import time
 import madana_apiclient
 from madana_apiclient.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://api.madana.io/rest
+# See configuration.py for a list of all supported configuration parameters.
+configuration = madana_apiclient.Configuration(
+    host = "http://api.madana.io/rest"
+)
+
 
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = madana_apiclient.SocialServiceApi(api_client)
-    
+    limit = '99' # str |  (optional) (default to '99')
+offset = '0' # str |  (optional) (default to '0')
+
     try:
         # Returns the Ranking by PTS within the System.
-        api_response = api_instance.get_ranking()
+        api_response = api_instance.get_ranking(limit=limit, offset=offset)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling SocialServiceApi->get_ranking: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **limit** | **str**|  | [optional] [default to &#39;99&#39;]
+ **offset** | **str**|  | [optional] [default to &#39;0&#39;]
 
 ### Return type
 
@@ -178,6 +202,12 @@ import time
 import madana_apiclient
 from madana_apiclient.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://api.madana.io/rest
+# See configuration.py for a list of all supported configuration parameters.
+configuration = madana_apiclient.Configuration(
+    host = "http://api.madana.io/rest"
+)
+
 
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
@@ -231,6 +261,12 @@ import time
 import madana_apiclient
 from madana_apiclient.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://api.madana.io/rest
+# See configuration.py for a list of all supported configuration parameters.
+configuration = madana_apiclient.Configuration(
+    host = "http://api.madana.io/rest"
+)
+
 
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
@@ -286,6 +322,12 @@ import time
 import madana_apiclient
 from madana_apiclient.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://api.madana.io/rest
+# See configuration.py for a list of all supported configuration parameters.
+configuration = madana_apiclient.Configuration(
+    host = "http://api.madana.io/rest"
+)
+
 
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:

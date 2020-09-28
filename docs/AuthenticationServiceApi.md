@@ -32,6 +32,12 @@ import time
 import madana_apiclient
 from madana_apiclient.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://api.madana.io/rest
+# See configuration.py for a list of all supported configuration parameters.
+configuration = madana_apiclient.Configuration(
+    host = "http://api.madana.io/rest"
+)
+
 
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
@@ -89,6 +95,12 @@ import time
 import madana_apiclient
 from madana_apiclient.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://api.madana.io/rest
+# See configuration.py for a list of all supported configuration parameters.
+configuration = madana_apiclient.Configuration(
+    host = "http://api.madana.io/rest"
+)
+
 
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
@@ -148,6 +160,12 @@ import time
 import madana_apiclient
 from madana_apiclient.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://api.madana.io/rest
+# See configuration.py for a list of all supported configuration parameters.
+configuration = madana_apiclient.Configuration(
+    host = "http://api.madana.io/rest"
+)
+
 
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
@@ -204,6 +222,12 @@ import time
 import madana_apiclient
 from madana_apiclient.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://api.madana.io/rest
+# See configuration.py for a list of all supported configuration parameters.
+configuration = madana_apiclient.Configuration(
+    host = "http://api.madana.io/rest"
+)
+
 
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
@@ -263,6 +287,12 @@ import time
 import madana_apiclient
 from madana_apiclient.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://api.madana.io/rest
+# See configuration.py for a list of all supported configuration parameters.
+configuration = madana_apiclient.Configuration(
+    host = "http://api.madana.io/rest"
+)
+
 
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
@@ -315,6 +345,12 @@ import time
 import madana_apiclient
 from madana_apiclient.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://api.madana.io/rest
+# See configuration.py for a list of all supported configuration parameters.
+configuration = madana_apiclient.Configuration(
+    host = "http://api.madana.io/rest"
+)
+
 
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
@@ -374,6 +410,12 @@ import time
 import madana_apiclient
 from madana_apiclient.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://api.madana.io/rest
+# See configuration.py for a list of all supported configuration parameters.
+configuration = madana_apiclient.Configuration(
+    host = "http://api.madana.io/rest"
+)
+
 
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
@@ -427,6 +469,12 @@ import time
 import madana_apiclient
 from madana_apiclient.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://api.madana.io/rest
+# See configuration.py for a list of all supported configuration parameters.
+configuration = madana_apiclient.Configuration(
+    host = "http://api.madana.io/rest"
+)
+
 
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
@@ -479,6 +527,12 @@ import time
 import madana_apiclient
 from madana_apiclient.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://api.madana.io/rest
+# See configuration.py for a list of all supported configuration parameters.
+configuration = madana_apiclient.Configuration(
+    host = "http://api.madana.io/rest"
+)
+
 
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
@@ -533,6 +587,12 @@ import time
 import madana_apiclient
 from madana_apiclient.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://api.madana.io/rest
+# See configuration.py for a list of all supported configuration parameters.
+configuration = madana_apiclient.Configuration(
+    host = "http://api.madana.io/rest"
+)
+
 
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
@@ -586,6 +646,12 @@ import time
 import madana_apiclient
 from madana_apiclient.rest import ApiException
 from pprint import pprint
+# Defining the host is optional and defaults to http://api.madana.io/rest
+# See configuration.py for a list of all supported configuration parameters.
+configuration = madana_apiclient.Configuration(
+    host = "http://api.madana.io/rest"
+)
+
 
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
