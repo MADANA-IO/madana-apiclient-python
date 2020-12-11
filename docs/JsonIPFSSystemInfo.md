@@ -4,9 +4,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**protocol_version** | **str** |  | [optional] 
 **agent_version** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
-**protocol_version** | **str** |  | [optional] 
 **public_key** | **str** |  | [optional] 
 **swarm_connection** | **str** |  | [optional] 
 

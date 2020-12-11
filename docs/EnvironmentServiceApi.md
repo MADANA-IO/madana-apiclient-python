@@ -415,15 +415,15 @@ with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = environment_service_api.EnvironmentServiceApi(api_client)
     body = JsonEnvironmentPublishingRequest(
-        packages="packages_example",
         name="name_example",
+        is_public="is_public_example",
         content="content_example",
+        size="size_example",
         ipfs_primary_peer="ipfs_primary_peer_example",
         uuid="uuid_example",
+        packages="packages_example",
         ipfs_hash="ipfs_hash_example",
-        is_public="is_public_example",
         description="description_example",
-        size="size_example",
     ) # JsonEnvironmentPublishingRequest |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -546,37 +546,37 @@ with madana_apiclient.ApiClient() as api_client:
     api_instance = environment_service_api.EnvironmentServiceApi(api_client)
     uuid = "uuid_example" # str | 
     body = JsonEnvironment(
-        root_hash_offset="root_hash_offset_example",
-        name="name_example",
+        description="description_example",
+        roothash="roothash_example",
         default_run_configuration=JsonRunConfig(
-            run="run_example",
+            args=[
+                "args_example",
+            ],
             environment={
                 "key": "key_example",
             },
             disk_config=[
                 JsonDiskConfig(
                     readonly=True,
-                    disk="disk_example",
-                    roothash_offset=1,
                     roothash="roothash_example",
+                    roothash_offset=1,
+                    disk="disk_example",
                 ),
             ],
-            args=[
-                "args_example",
-            ],
+            run="run_example",
         ),
+        published=True,
+        name="name_example",
+        root_hash_offset="root_hash_offset_example",
         content=[
             "content_example",
         ],
         size="size_example",
-        description="description_example",
-        uuid="uuid_example",
-        roothash="roothash_example",
         ipfs_hash="ipfs_hash_example",
         packages=[
             "packages_example",
         ],
-        published=True,
+        uuid="uuid_example",
     ) # JsonEnvironment |  (optional)
 
     # example passing only required values which don't have defaults set
