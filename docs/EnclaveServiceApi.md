@@ -16,17 +16,17 @@ Method | HTTP request | Description
 
 
 # **add_history**
-> file add_history(uuid, body=body)
+> file_type add_history(uuid)
 
 
 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import enclave_service_api
+from madana_apiclient.model.json_signed_data import JsonSignedData
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -38,14 +38,27 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.EnclaveServiceApi(api_client)
-    uuid = 'uuid_example' # str | 
-body = madana_apiclient.JsonSignedData() # JsonSignedData |  (optional)
+    api_instance = enclave_service_api.EnclaveServiceApi(api_client)
+    uuid = "uuid_example" # str | 
+    body = JsonSignedData(
+        signature="signature_example",
+        data="data_example",
+        fingerpint="fingerpint_example",
+    ) # JsonSignedData |  (optional)
 
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.add_history(uuid)
+        pprint(api_response)
+    except madana_apiclient.ApiException as e:
+        print("Exception when calling EnclaveServiceApi->add_history: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
         api_response = api_instance.add_history(uuid, body=body)
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling EnclaveServiceApi->add_history: %s\n" % e)
 ```
 
@@ -53,12 +66,12 @@ body = madana_apiclient.JsonSignedData() # JsonSignedData |  (optional)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uuid** | **str**|  | 
- **body** | [**JsonSignedData**](JsonSignedData.md)|  | [optional] 
+ **uuid** | **str**|  |
+ **body** | [**JsonSignedData**](JsonSignedData.md)|  | [optional]
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 
@@ -77,17 +90,17 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **approve_enclave**
-> file approve_enclave(uuid, body=body)
+> file_type approve_enclave(uuid)
 
 
 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import enclave_service_api
+from madana_apiclient.model.json_enclave_running_attestation_approval import JsonEnclaveRunningAttestationApproval
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -99,14 +112,23 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.EnclaveServiceApi(api_client)
-    uuid = 'uuid_example' # str | 
-body = madana_apiclient.JsonEnclaveRunningAttestationApproval() # JsonEnclaveRunningAttestationApproval |  (optional)
+    api_instance = enclave_service_api.EnclaveServiceApi(api_client)
+    uuid = "uuid_example" # str | 
+    body = JsonEnclaveRunningAttestationApproval() # JsonEnclaveRunningAttestationApproval |  (optional)
 
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.approve_enclave(uuid)
+        pprint(api_response)
+    except madana_apiclient.ApiException as e:
+        print("Exception when calling EnclaveServiceApi->approve_enclave: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
         api_response = api_instance.approve_enclave(uuid, body=body)
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling EnclaveServiceApi->approve_enclave: %s\n" % e)
 ```
 
@@ -114,12 +136,12 @@ body = madana_apiclient.JsonEnclaveRunningAttestationApproval() # JsonEnclaveRun
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uuid** | **str**|  | 
- **body** | [**JsonEnclaveRunningAttestationApproval**](JsonEnclaveRunningAttestationApproval.md)|  | [optional] 
+ **uuid** | **str**|  |
+ **body** | [**JsonEnclaveRunningAttestationApproval**](JsonEnclaveRunningAttestationApproval.md)|  | [optional]
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 
@@ -138,17 +160,17 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **assign_enclave_agent**
-> file assign_enclave_agent(uuid, body=body)
+> file_type assign_enclave_agent(uuid)
 
 
 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import enclave_service_api
+from madana_apiclient.model.json_node_info import JsonNodeInfo
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -160,14 +182,52 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.EnclaveServiceApi(api_client)
-    uuid = 'uuid_example' # str | 
-body = madana_apiclient.JsonNodeInfo() # JsonNodeInfo |  (optional)
+    api_instance = enclave_service_api.EnclaveServiceApi(api_client)
+    uuid = "uuid_example" # str | 
+    body = JsonNodeInfo(
+        hardware_firmware="hardware_firmware_example",
+        sgx_info=JsonSGXInfo(
+            version="version_example",
+            status="status_example",
+        ),
+        cpu_family="cpu_family_example",
+        cpu_frequency="cpu_frequency_example",
+        cpu_logical_count=1,
+        processors=[
+            "processors_example",
+        ],
+        cpu_physical_cores=1,
+        operating_system_uptime=3.14,
+        status="status_example",
+        owner="owner_example",
+        cpu_model="cpu_model_example",
+        memory="memory_example",
+        connection_url="connection_url_example",
+        public_key="public_key_example",
+        hardware_baseboard="hardware_baseboard_example",
+        operating_system="operating_system_example",
+        ipfs_info=JsonIPFSSystemInfo(
+            agent_version="agent_version_example",
+            id="id_example",
+            protocol_version="protocol_version_example",
+            public_key="public_key_example",
+            swarm_connection="swarm_connection_example",
+        ),
+    ) # JsonNodeInfo |  (optional)
 
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.assign_enclave_agent(uuid)
+        pprint(api_response)
+    except madana_apiclient.ApiException as e:
+        print("Exception when calling EnclaveServiceApi->assign_enclave_agent: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
         api_response = api_instance.assign_enclave_agent(uuid, body=body)
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling EnclaveServiceApi->assign_enclave_agent: %s\n" % e)
 ```
 
@@ -175,12 +235,12 @@ body = madana_apiclient.JsonNodeInfo() # JsonNodeInfo |  (optional)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uuid** | **str**|  | 
- **body** | [**JsonNodeInfo**](JsonNodeInfo.md)|  | [optional] 
+ **uuid** | **str**|  |
+ **body** | [**JsonNodeInfo**](JsonNodeInfo.md)|  | [optional]
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 
@@ -199,17 +259,17 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **attestate_enclave**
-> file attestate_enclave(uuid, body=body)
+> file_type attestate_enclave(uuid)
 
 
 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import enclave_service_api
+from madana_apiclient.model.json_enclave_running_attestation import JsonEnclaveRunningAttestation
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -221,14 +281,123 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.EnclaveServiceApi(api_client)
-    uuid = 'uuid_example' # str | 
-body = madana_apiclient.JsonEnclaveRunningAttestation() # JsonEnclaveRunningAttestation |  (optional)
+    api_instance = enclave_service_api.EnclaveServiceApi(api_client)
+    uuid = "uuid_example" # str | 
+    body = JsonEnclaveRunningAttestation(
+        enclave_process=JsonEnclaveProcess(
+            enclave_ident="enclave_ident_example",
+            internal_wireguard_server="internal_wireguard_server_example",
+            startup_cmd="startup_cmd_example",
+            internal_ident="internal_ident_example",
+            attestation_server="attestation_server_example",
+            ending_time="ending_time_example",
+            port_mapping={
+                "key": "key_example",
+            },
+            internal_attesation_server="internal_attesation_server_example",
+            wireguard_public_key="wireguard_public_key_example",
+            remote_control_server="remote_control_server_example",
+            internal_remote_control_server="internal_remote_control_server_example",
+            status="status_example",
+            signer_ident="signer_ident_example",
+            environment=JsonEnvironment(
+                root_hash_offset="root_hash_offset_example",
+                name="name_example",
+                default_run_configuration=JsonRunConfig(
+                    run="run_example",
+                    environment={
+                        "key": "key_example",
+                    },
+                    disk_config=[
+                        JsonDiskConfig(
+                            readonly=True,
+                            disk="disk_example",
+                            roothash_offset=1,
+                            roothash="roothash_example",
+                        ),
+                    ],
+                    args=[
+                        "args_example",
+                    ],
+                ),
+                content=[
+                    "content_example",
+                ],
+                size="size_example",
+                description="description_example",
+                uuid="uuid_example",
+                roothash="roothash_example",
+                ipfs_hash="ipfs_hash_example",
+                packages=[
+                    "packages_example",
+                ],
+                published=True,
+            ),
+            console_output="console_output_example",
+            enclave_inputstream={},
+            wg_interface=JsonWireguardInterface(),
+            ports=[
+                JsonEnclavePort(
+                    port="port_example",
+                    protocol="protocol_example",
+                    name="name_example",
+                ),
+            ],
+            public_ident="public_ident_example",
+            process=JsonProcess(
+                error_stream={},
+                input_stream={},
+                alive=True,
+                output_stream={},
+            ),
+            wireguard_server="wireguard_server_example",
+            startup_time="startup_time_example",
+        ),
+        node_info=JsonNodeInfo(
+            hardware_firmware="hardware_firmware_example",
+            sgx_info=JsonSGXInfo(
+                version="version_example",
+                status="status_example",
+            ),
+            cpu_family="cpu_family_example",
+            cpu_frequency="cpu_frequency_example",
+            cpu_logical_count=1,
+            processors=[
+                "processors_example",
+            ],
+            cpu_physical_cores=1,
+            operating_system_uptime=3.14,
+            status="status_example",
+            owner="owner_example",
+            cpu_model="cpu_model_example",
+            memory="memory_example",
+            connection_url="connection_url_example",
+            public_key="public_key_example",
+            hardware_baseboard="hardware_baseboard_example",
+            operating_system="operating_system_example",
+            ipfs_info=JsonIPFSSystemInfo(
+                agent_version="agent_version_example",
+                id="id_example",
+                protocol_version="protocol_version_example",
+                public_key="public_key_example",
+                swarm_connection="swarm_connection_example",
+            ),
+        ),
+    ) # JsonEnclaveRunningAttestation |  (optional)
 
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.attestate_enclave(uuid)
+        pprint(api_response)
+    except madana_apiclient.ApiException as e:
+        print("Exception when calling EnclaveServiceApi->attestate_enclave: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
         api_response = api_instance.attestate_enclave(uuid, body=body)
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling EnclaveServiceApi->attestate_enclave: %s\n" % e)
 ```
 
@@ -236,12 +405,12 @@ body = madana_apiclient.JsonEnclaveRunningAttestation() # JsonEnclaveRunningAtte
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uuid** | **str**|  | 
- **body** | [**JsonEnclaveRunningAttestation**](JsonEnclaveRunningAttestation.md)|  | [optional] 
+ **uuid** | **str**|  |
+ **body** | [**JsonEnclaveRunningAttestation**](JsonEnclaveRunningAttestation.md)|  | [optional]
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 
@@ -260,17 +429,17 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_enclave_run_request**
-> file create_enclave_run_request(body=body)
+> file_type create_enclave_run_request()
 
 
 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import enclave_service_api
+from madana_apiclient.model.json_enclave_run_request import JsonEnclaveRunRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -282,13 +451,27 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.EnclaveServiceApi(api_client)
-    body = madana_apiclient.JsonEnclaveRunRequest() # JsonEnclaveRunRequest |  (optional)
+    api_instance = enclave_service_api.EnclaveServiceApi(api_client)
+    body = JsonEnclaveRunRequest(
+        ports=[
+            JsonEnclavePort(
+                port="port_example",
+                protocol="protocol_example",
+                name="name_example",
+            ),
+        ],
+        wireguard_public_key="wireguard_public_key_example",
+        enclave_execution_type="enclave_execution_type_example",
+        using_default_run_config=True,
+        environment_uuid="environment_uuid_example",
+    ) # JsonEnclaveRunRequest |  (optional)
 
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
         api_response = api_instance.create_enclave_run_request(body=body)
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling EnclaveServiceApi->create_enclave_run_request: %s\n" % e)
 ```
 
@@ -296,11 +479,11 @@ with madana_apiclient.ApiClient() as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**JsonEnclaveRunRequest**](JsonEnclaveRunRequest.md)|  | [optional] 
+ **body** | [**JsonEnclaveRunRequest**](JsonEnclaveRunRequest.md)|  | [optional]
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 
@@ -319,17 +502,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_enclave**
-> file get_enclave(uuid)
+> file_type get_enclave(uuid)
 
 
 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import enclave_service_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -341,13 +523,14 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.EnclaveServiceApi(api_client)
-    uuid = 'uuid_example' # str | 
+    api_instance = enclave_service_api.EnclaveServiceApi(api_client)
+    uuid = "uuid_example" # str | 
 
+    # example passing only required values which don't have defaults set
     try:
         api_response = api_instance.get_enclave(uuid)
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling EnclaveServiceApi->get_enclave: %s\n" % e)
 ```
 
@@ -355,11 +538,11 @@ with madana_apiclient.ApiClient() as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uuid** | **str**|  | 
+ **uuid** | **str**|  |
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 
@@ -378,17 +561,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_enclave_types**
-> file get_enclave_types()
+> file_type get_enclave_types()
 
 
 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import enclave_service_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -400,12 +582,13 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.EnclaveServiceApi(api_client)
-    
+    api_instance = enclave_service_api.EnclaveServiceApi(api_client)
+
+    # example, this endpoint has no required or optional parameters
     try:
         api_response = api_instance.get_enclave_types()
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling EnclaveServiceApi->get_enclave_types: %s\n" % e)
 ```
 
@@ -414,7 +597,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 
@@ -433,7 +616,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_enclaves**
-> file get_enclaves(authorization=authorization, created=created, limit=limit, offset=offset, status=status)
+> file_type get_enclaves()
 
 Returns UUIDs of existing analyses.
 
@@ -442,10 +625,9 @@ Returns UUIDs of existing analyses.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import enclave_service_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -457,18 +639,20 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.EnclaveServiceApi(api_client)
-    authorization = 'authorization_example' # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
-created = 'true' # str | - if Queryparam \"created=true\" only the UUIDs of own Requests are shown (optional) (default to 'true')
-limit = '30' # str | Used for offset pagination. Limit/Offset Paging would look like GET /request?limit=20&offset=100. This query would return the 20 rows starting with the 100th row (optional) (default to '30')
-offset = '0' # str | Used for offset pagination. Limit/Offset Paging would look like GET /request?limit=20&offset=100. This query would return the 20 rows starting with the 100th row (optional) (default to '0')
-status = 'status_example' # str |  (optional)
+    api_instance = enclave_service_api.EnclaveServiceApi(api_client)
+    authorization = "Authorization_example" # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
+    created = "true" # str | - if Queryparam \"created=true\" only the UUIDs of own Requests are shown (optional) if omitted the server will use the default value of "true"
+    limit = "30" # str | Used for offset pagination. Limit/Offset Paging would look like GET /request?limit=20&offset=100. This query would return the 20 rows starting with the 100th row (optional) if omitted the server will use the default value of "30"
+    offset = "0" # str | Used for offset pagination. Limit/Offset Paging would look like GET /request?limit=20&offset=100. This query would return the 20 rows starting with the 100th row (optional) if omitted the server will use the default value of "0"
+    status = "status_example" # str |  (optional)
 
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
         # Returns UUIDs of existing analyses.
         api_response = api_instance.get_enclaves(authorization=authorization, created=created, limit=limit, offset=offset, status=status)
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling EnclaveServiceApi->get_enclaves: %s\n" % e)
 ```
 
@@ -476,15 +660,15 @@ status = 'status_example' # str |  (optional)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **str**| Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c | [optional] 
- **created** | **str**| - if Queryparam \&quot;created&#x3D;true\&quot; only the UUIDs of own Requests are shown | [optional] [default to &#39;true&#39;]
- **limit** | **str**| Used for offset pagination. Limit/Offset Paging would look like GET /request?limit&#x3D;20&amp;offset&#x3D;100. This query would return the 20 rows starting with the 100th row | [optional] [default to &#39;30&#39;]
- **offset** | **str**| Used for offset pagination. Limit/Offset Paging would look like GET /request?limit&#x3D;20&amp;offset&#x3D;100. This query would return the 20 rows starting with the 100th row | [optional] [default to &#39;0&#39;]
- **status** | **str**|  | [optional] 
+ **authorization** | **str**| Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c | [optional]
+ **created** | **str**| - if Queryparam \&quot;created&#x3D;true\&quot; only the UUIDs of own Requests are shown | [optional] if omitted the server will use the default value of "true"
+ **limit** | **str**| Used for offset pagination. Limit/Offset Paging would look like GET /request?limit&#x3D;20&amp;offset&#x3D;100. This query would return the 20 rows starting with the 100th row | [optional] if omitted the server will use the default value of "30"
+ **offset** | **str**| Used for offset pagination. Limit/Offset Paging would look like GET /request?limit&#x3D;20&amp;offset&#x3D;100. This query would return the 20 rows starting with the 100th row | [optional] if omitted the server will use the default value of "0"
+ **status** | **str**|  | [optional]
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 
@@ -504,17 +688,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **kill_enclave**
-> file kill_enclave(uuid)
+> file_type kill_enclave(uuid)
 
 
 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import enclave_service_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -526,13 +709,14 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.EnclaveServiceApi(api_client)
-    uuid = 'uuid_example' # str | 
+    api_instance = enclave_service_api.EnclaveServiceApi(api_client)
+    uuid = "uuid_example" # str | 
 
+    # example passing only required values which don't have defaults set
     try:
         api_response = api_instance.kill_enclave(uuid)
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling EnclaveServiceApi->kill_enclave: %s\n" % e)
 ```
 
@@ -540,11 +724,11 @@ with madana_apiclient.ApiClient() as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uuid** | **str**|  | 
+ **uuid** | **str**|  |
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 

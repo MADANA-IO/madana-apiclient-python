@@ -13,17 +13,16 @@ Method | HTTP request | Description
 
 
 # **get_my_profile**
-> file get_my_profile()
+> file_type get_my_profile()
 
 
 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import social_service_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -35,12 +34,13 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.SocialServiceApi(api_client)
-    
+    api_instance = social_service_api.SocialServiceApi(api_client)
+
+    # example, this endpoint has no required or optional parameters
     try:
         api_response = api_instance.get_my_profile()
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling SocialServiceApi->get_my_profile: %s\n" % e)
 ```
 
@@ -49,7 +49,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 
@@ -68,7 +68,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_platforms2**
-> file get_platforms2()
+> file_type get_platforms2()
 
 Returns all Platforms / Systems that can be Connected to the MADANA Service.
 
@@ -77,10 +77,9 @@ Returns all Platforms / Systems that can be Connected to the MADANA Service
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import social_service_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -92,13 +91,14 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.SocialServiceApi(api_client)
-    
+    api_instance = social_service_api.SocialServiceApi(api_client)
+
+    # example, this endpoint has no required or optional parameters
     try:
         # Returns all Platforms / Systems that can be Connected to the MADANA Service.
         api_response = api_instance.get_platforms2()
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling SocialServiceApi->get_platforms2: %s\n" % e)
 ```
 
@@ -107,7 +107,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 
@@ -126,7 +126,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ranking**
-> file get_ranking(limit=limit, offset=offset)
+> file_type get_ranking()
 
 Returns the Ranking by PTS within the System.
 
@@ -135,10 +135,9 @@ Returns the Ranking by PTS within the System
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import social_service_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -150,15 +149,17 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.SocialServiceApi(api_client)
-    limit = '99' # str |  (optional) (default to '99')
-offset = '0' # str |  (optional) (default to '0')
+    api_instance = social_service_api.SocialServiceApi(api_client)
+    limit = "99" # str |  (optional) if omitted the server will use the default value of "99"
+    offset = "0" # str |  (optional) if omitted the server will use the default value of "0"
 
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
         # Returns the Ranking by PTS within the System.
         api_response = api_instance.get_ranking(limit=limit, offset=offset)
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling SocialServiceApi->get_ranking: %s\n" % e)
 ```
 
@@ -166,12 +167,12 @@ offset = '0' # str |  (optional) (default to '0')
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **limit** | **str**|  | [optional] [default to &#39;99&#39;]
- **offset** | **str**|  | [optional] [default to &#39;0&#39;]
+ **limit** | **str**|  | [optional] if omitted the server will use the default value of "99"
+ **offset** | **str**|  | [optional] if omitted the server will use the default value of "0"
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 
@@ -190,17 +191,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_social_platform_feed**
-> file get_social_platform_feed(platform)
+> file_type get_social_platform_feed(platform)
 
 
 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import social_service_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -212,13 +212,14 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.SocialServiceApi(api_client)
-    platform = 'platform_example' # str | 
+    api_instance = social_service_api.SocialServiceApi(api_client)
+    platform = "platform_example" # str | 
 
+    # example passing only required values which don't have defaults set
     try:
         api_response = api_instance.get_social_platform_feed(platform)
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling SocialServiceApi->get_social_platform_feed: %s\n" % e)
 ```
 
@@ -226,11 +227,11 @@ with madana_apiclient.ApiClient() as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **platform** | **str**|  | 
+ **platform** | **str**|  |
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 
@@ -249,17 +250,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_user_profile**
-> file get_user_profile(username, simple=simple)
+> file_type get_user_profile(username)
 
 
 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import social_service_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -271,14 +271,23 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.SocialServiceApi(api_client)
-    username = 'username_example' # str | 
-simple = 'false' # str |  (optional) (default to 'false')
+    api_instance = social_service_api.SocialServiceApi(api_client)
+    username = "username_example" # str | 
+    simple = "false" # str |  (optional) if omitted the server will use the default value of "false"
 
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_user_profile(username)
+        pprint(api_response)
+    except madana_apiclient.ApiException as e:
+        print("Exception when calling SocialServiceApi->get_user_profile: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
         api_response = api_instance.get_user_profile(username, simple=simple)
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling SocialServiceApi->get_user_profile: %s\n" % e)
 ```
 
@@ -286,12 +295,12 @@ simple = 'false' # str |  (optional) (default to 'false')
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **str**|  | 
- **simple** | **str**|  | [optional] [default to &#39;false&#39;]
+ **username** | **str**|  |
+ **simple** | **str**|  | [optional] if omitted the server will use the default value of "false"
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 
@@ -310,17 +319,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_user_profile_0**
-> file get_user_profile_0(username)
+> file_type get_user_profile_0(username)
 
 
 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import social_service_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -332,13 +340,14 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.SocialServiceApi(api_client)
-    username = 'username_example' # str | 
+    api_instance = social_service_api.SocialServiceApi(api_client)
+    username = "username_example" # str | 
 
+    # example passing only required values which don't have defaults set
     try:
         api_response = api_instance.get_user_profile_0(username)
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling SocialServiceApi->get_user_profile_0: %s\n" % e)
 ```
 
@@ -346,11 +355,11 @@ with madana_apiclient.ApiClient() as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **username** | **str**|  | 
+ **username** | **str**|  |
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 

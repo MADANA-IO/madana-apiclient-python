@@ -9,17 +9,16 @@ Method | HTTP request | Description
 
 
 # **get_all_objects**
-> file get_all_objects()
+> file_type get_all_objects()
 
 
 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import system_service_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -31,12 +30,13 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.SystemServiceApi(api_client)
-    
+    api_instance = system_service_api.SystemServiceApi(api_client)
+
+    # example, this endpoint has no required or optional parameters
     try:
         api_response = api_instance.get_all_objects()
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling SystemServiceApi->get_all_objects: %s\n" % e)
 ```
 
@@ -45,7 +45,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 
@@ -64,7 +64,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_application**
-> dict(str, object) get_application()
+> {str: ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},)} get_application()
 
 Return the current application usage.
 
@@ -73,10 +73,9 @@ Return the current application usage
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import system_service_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -88,13 +87,14 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.SystemServiceApi(api_client)
-    
+    api_instance = system_service_api.SystemServiceApi(api_client)
+
+    # example, this endpoint has no required or optional parameters
     try:
         # Return the current application usage.
         api_response = api_instance.get_application()
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling SystemServiceApi->get_application: %s\n" % e)
 ```
 
@@ -103,7 +103,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**dict(str, object)**
+**{str: ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},)}**
 
 ### Authorization
 

@@ -16,8 +16,9 @@ Name | Type | Description | Notes
 **operating_system** | **str** |  | [optional] 
 **operating_system_uptime** | **int** |  | [optional] 
 **owner** | **str** |  | [optional] 
-**processors** | **list[str]** |  | [optional] 
+**processors** | **[str]** |  | [optional] 
 **public_key** | **str** |  | [optional] 
+**sgx_info** | [**XmlNs0SGXInfo**](XmlNs0SGXInfo.md) |  | [optional] 
 **status** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

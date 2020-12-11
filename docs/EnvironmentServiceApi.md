@@ -16,17 +16,16 @@ Method | HTTP request | Description
 
 
 # **delete_environment**
-> file delete_environment(uuid)
+> file_type delete_environment(uuid)
 
 
 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import environment_service_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -38,13 +37,14 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.EnvironmentServiceApi(api_client)
-    uuid = 'uuid_example' # str | 
+    api_instance = environment_service_api.EnvironmentServiceApi(api_client)
+    uuid = "uuid_example" # str | 
 
+    # example passing only required values which don't have defaults set
     try:
         api_response = api_instance.delete_environment(uuid)
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling EnvironmentServiceApi->delete_environment: %s\n" % e)
 ```
 
@@ -52,11 +52,11 @@ with madana_apiclient.ApiClient() as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uuid** | **str**|  | 
+ **uuid** | **str**|  |
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 
@@ -75,17 +75,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_environment_subscription**
-> file delete_environment_subscription(uuid)
+> file_type delete_environment_subscription(uuid)
 
 
 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import environment_service_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -97,13 +96,14 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.EnvironmentServiceApi(api_client)
-    uuid = 'uuid_example' # str | 
+    api_instance = environment_service_api.EnvironmentServiceApi(api_client)
+    uuid = "uuid_example" # str | 
 
+    # example passing only required values which don't have defaults set
     try:
         api_response = api_instance.delete_environment_subscription(uuid)
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling EnvironmentServiceApi->delete_environment_subscription: %s\n" % e)
 ```
 
@@ -111,11 +111,11 @@ with madana_apiclient.ApiClient() as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uuid** | **str**|  | 
+ **uuid** | **str**|  |
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 
@@ -134,17 +134,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_environment**
-> file get_environment(uuid)
+> file_type get_environment(uuid)
 
 
 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import environment_service_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -156,13 +155,14 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.EnvironmentServiceApi(api_client)
-    uuid = 'uuid_example' # str | 
+    api_instance = environment_service_api.EnvironmentServiceApi(api_client)
+    uuid = "uuid_example" # str | 
 
+    # example passing only required values which don't have defaults set
     try:
         api_response = api_instance.get_environment(uuid)
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling EnvironmentServiceApi->get_environment: %s\n" % e)
 ```
 
@@ -170,11 +170,11 @@ with madana_apiclient.ApiClient() as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uuid** | **str**|  | 
+ **uuid** | **str**|  |
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 
@@ -193,7 +193,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_environments**
-> file get_environments(authorization=authorization, created=created, limit=limit, name=name, offset=offset)
+> file_type get_environments()
 
 Returns UUIDs of existing analyses.
 
@@ -202,10 +202,9 @@ Returns UUIDs of existing analyses.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import environment_service_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -217,18 +216,20 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.EnvironmentServiceApi(api_client)
-    authorization = 'authorization_example' # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
-created = 'true' # str | - if Queryparam \"created=true\" only the UUIDs of own Requests are shown (optional) (default to 'true')
-limit = '30' # str | Used for offset pagination. Limit/Offset Paging would look like GET /request?limit=20&offset=100. This query would return the 20 rows starting with the 100th row (optional) (default to '30')
-name = 'name_example' # str |  (optional)
-offset = '0' # str | Used for offset pagination. Limit/Offset Paging would look like GET /request?limit=20&offset=100. This query would return the 20 rows starting with the 100th row (optional) (default to '0')
+    api_instance = environment_service_api.EnvironmentServiceApi(api_client)
+    authorization = "Authorization_example" # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
+    created = "true" # str | - if Queryparam \"created=true\" only the UUIDs of own Requests are shown (optional) if omitted the server will use the default value of "true"
+    limit = "30" # str | Used for offset pagination. Limit/Offset Paging would look like GET /request?limit=20&offset=100. This query would return the 20 rows starting with the 100th row (optional) if omitted the server will use the default value of "30"
+    name = "name_example" # str |  (optional)
+    offset = "0" # str | Used for offset pagination. Limit/Offset Paging would look like GET /request?limit=20&offset=100. This query would return the 20 rows starting with the 100th row (optional) if omitted the server will use the default value of "0"
 
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
         # Returns UUIDs of existing analyses.
         api_response = api_instance.get_environments(authorization=authorization, created=created, limit=limit, name=name, offset=offset)
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling EnvironmentServiceApi->get_environments: %s\n" % e)
 ```
 
@@ -236,15 +237,15 @@ offset = '0' # str | Used for offset pagination. Limit/Offset Paging would look 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **authorization** | **str**| Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c | [optional] 
- **created** | **str**| - if Queryparam \&quot;created&#x3D;true\&quot; only the UUIDs of own Requests are shown | [optional] [default to &#39;true&#39;]
- **limit** | **str**| Used for offset pagination. Limit/Offset Paging would look like GET /request?limit&#x3D;20&amp;offset&#x3D;100. This query would return the 20 rows starting with the 100th row | [optional] [default to &#39;30&#39;]
- **name** | **str**|  | [optional] 
- **offset** | **str**| Used for offset pagination. Limit/Offset Paging would look like GET /request?limit&#x3D;20&amp;offset&#x3D;100. This query would return the 20 rows starting with the 100th row | [optional] [default to &#39;0&#39;]
+ **authorization** | **str**| Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c | [optional]
+ **created** | **str**| - if Queryparam \&quot;created&#x3D;true\&quot; only the UUIDs of own Requests are shown | [optional] if omitted the server will use the default value of "true"
+ **limit** | **str**| Used for offset pagination. Limit/Offset Paging would look like GET /request?limit&#x3D;20&amp;offset&#x3D;100. This query would return the 20 rows starting with the 100th row | [optional] if omitted the server will use the default value of "30"
+ **name** | **str**|  | [optional]
+ **offset** | **str**| Used for offset pagination. Limit/Offset Paging would look like GET /request?limit&#x3D;20&amp;offset&#x3D;100. This query would return the 20 rows starting with the 100th row | [optional] if omitted the server will use the default value of "0"
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 
@@ -264,17 +265,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_published_environments**
-> file get_published_environments(limit=limit, name=name, offset=offset)
+> file_type get_published_environments()
 
 
 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import environment_service_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -286,15 +286,17 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.EnvironmentServiceApi(api_client)
-    limit = '30' # str |  (optional) (default to '30')
-name = 'name_example' # str |  (optional)
-offset = '0' # str |  (optional) (default to '0')
+    api_instance = environment_service_api.EnvironmentServiceApi(api_client)
+    limit = "30" # str |  (optional) if omitted the server will use the default value of "30"
+    name = "name_example" # str |  (optional)
+    offset = "0" # str |  (optional) if omitted the server will use the default value of "0"
 
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
         api_response = api_instance.get_published_environments(limit=limit, name=name, offset=offset)
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling EnvironmentServiceApi->get_published_environments: %s\n" % e)
 ```
 
@@ -302,13 +304,13 @@ offset = '0' # str |  (optional) (default to '0')
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **limit** | **str**|  | [optional] [default to &#39;30&#39;]
- **name** | **str**|  | [optional] 
- **offset** | **str**|  | [optional] [default to &#39;0&#39;]
+ **limit** | **str**|  | [optional] if omitted the server will use the default value of "30"
+ **name** | **str**|  | [optional]
+ **offset** | **str**|  | [optional] if omitted the server will use the default value of "0"
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 
@@ -327,17 +329,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_subscribed_environments**
-> file get_subscribed_environments(limit=limit, offset=offset)
+> file_type get_subscribed_environments()
 
 
 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import environment_service_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -349,14 +350,16 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.EnvironmentServiceApi(api_client)
-    limit = '30' # str |  (optional) (default to '30')
-offset = '0' # str |  (optional) (default to '0')
+    api_instance = environment_service_api.EnvironmentServiceApi(api_client)
+    limit = "30" # str |  (optional) if omitted the server will use the default value of "30"
+    offset = "0" # str |  (optional) if omitted the server will use the default value of "0"
 
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
         api_response = api_instance.get_subscribed_environments(limit=limit, offset=offset)
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling EnvironmentServiceApi->get_subscribed_environments: %s\n" % e)
 ```
 
@@ -364,12 +367,12 @@ offset = '0' # str |  (optional) (default to '0')
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **limit** | **str**|  | [optional] [default to &#39;30&#39;]
- **offset** | **str**|  | [optional] [default to &#39;0&#39;]
+ **limit** | **str**|  | [optional] if omitted the server will use the default value of "30"
+ **offset** | **str**|  | [optional] if omitted the server will use the default value of "0"
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 
@@ -388,17 +391,17 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **publish_environment**
-> file publish_environment(body=body)
+> file_type publish_environment()
 
 
 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import environment_service_api
+from madana_apiclient.model.json_environment_publishing_request import JsonEnvironmentPublishingRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -410,13 +413,25 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.EnvironmentServiceApi(api_client)
-    body = madana_apiclient.JsonEnvironmentPublishingRequest() # JsonEnvironmentPublishingRequest |  (optional)
+    api_instance = environment_service_api.EnvironmentServiceApi(api_client)
+    body = JsonEnvironmentPublishingRequest(
+        packages="packages_example",
+        name="name_example",
+        content="content_example",
+        ipfs_primary_peer="ipfs_primary_peer_example",
+        uuid="uuid_example",
+        ipfs_hash="ipfs_hash_example",
+        is_public="is_public_example",
+        description="description_example",
+        size="size_example",
+    ) # JsonEnvironmentPublishingRequest |  (optional)
 
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
         api_response = api_instance.publish_environment(body=body)
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling EnvironmentServiceApi->publish_environment: %s\n" % e)
 ```
 
@@ -424,11 +439,11 @@ with madana_apiclient.ApiClient() as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**JsonEnvironmentPublishingRequest**](JsonEnvironmentPublishingRequest.md)|  | [optional] 
+ **body** | [**JsonEnvironmentPublishingRequest**](JsonEnvironmentPublishingRequest.md)|  | [optional]
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 
@@ -447,17 +462,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **subscribe_environment**
-> file subscribe_environment(uuid)
+> file_type subscribe_environment(uuid)
 
 
 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import environment_service_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -469,13 +483,14 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.EnvironmentServiceApi(api_client)
-    uuid = 'uuid_example' # str | 
+    api_instance = environment_service_api.EnvironmentServiceApi(api_client)
+    uuid = "uuid_example" # str | 
 
+    # example passing only required values which don't have defaults set
     try:
         api_response = api_instance.subscribe_environment(uuid)
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling EnvironmentServiceApi->subscribe_environment: %s\n" % e)
 ```
 
@@ -483,11 +498,11 @@ with madana_apiclient.ApiClient() as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uuid** | **str**|  | 
+ **uuid** | **str**|  |
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 
@@ -506,17 +521,17 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_environment**
-> file update_environment(uuid, body=body)
+> file_type update_environment(uuid)
 
 
 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import environment_service_api
+from madana_apiclient.model.json_environment import JsonEnvironment
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -528,14 +543,55 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.EnvironmentServiceApi(api_client)
-    uuid = 'uuid_example' # str | 
-body = madana_apiclient.JsonEnvironment() # JsonEnvironment |  (optional)
+    api_instance = environment_service_api.EnvironmentServiceApi(api_client)
+    uuid = "uuid_example" # str | 
+    body = JsonEnvironment(
+        root_hash_offset="root_hash_offset_example",
+        name="name_example",
+        default_run_configuration=JsonRunConfig(
+            run="run_example",
+            environment={
+                "key": "key_example",
+            },
+            disk_config=[
+                JsonDiskConfig(
+                    readonly=True,
+                    disk="disk_example",
+                    roothash_offset=1,
+                    roothash="roothash_example",
+                ),
+            ],
+            args=[
+                "args_example",
+            ],
+        ),
+        content=[
+            "content_example",
+        ],
+        size="size_example",
+        description="description_example",
+        uuid="uuid_example",
+        roothash="roothash_example",
+        ipfs_hash="ipfs_hash_example",
+        packages=[
+            "packages_example",
+        ],
+        published=True,
+    ) # JsonEnvironment |  (optional)
 
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.update_environment(uuid)
+        pprint(api_response)
+    except madana_apiclient.ApiException as e:
+        print("Exception when calling EnvironmentServiceApi->update_environment: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
         api_response = api_instance.update_environment(uuid, body=body)
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling EnvironmentServiceApi->update_environment: %s\n" % e)
 ```
 
@@ -543,12 +599,12 @@ body = madana_apiclient.JsonEnvironment() # JsonEnvironment |  (optional)
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uuid** | **str**|  | 
- **body** | [**JsonEnvironment**](JsonEnvironment.md)|  | [optional] 
+ **uuid** | **str**|  |
+ **body** | [**JsonEnvironment**](JsonEnvironment.md)|  | [optional]
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 

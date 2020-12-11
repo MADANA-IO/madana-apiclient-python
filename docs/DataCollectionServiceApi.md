@@ -10,17 +10,16 @@ Method | HTTP request | Description
 
 
 # **get_methods_for_type**
-> file get_methods_for_type(name)
+> file_type get_methods_for_type(name)
 
 
 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import data_collection_service_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -32,13 +31,14 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.DataCollectionServiceApi(api_client)
-    name = 'name_example' # str | 
+    api_instance = data_collection_service_api.DataCollectionServiceApi(api_client)
+    name = "name_example" # str | 
 
+    # example passing only required values which don't have defaults set
     try:
         api_response = api_instance.get_methods_for_type(name)
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling DataCollectionServiceApi->get_methods_for_type: %s\n" % e)
 ```
 
@@ -46,11 +46,11 @@ with madana_apiclient.ApiClient() as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **str**|  | 
+ **name** | **str**|  |
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 
@@ -69,17 +69,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_nodes**
-> file get_nodes()
+> file_type get_nodes()
 
 
 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import data_collection_service_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -91,12 +90,13 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.DataCollectionServiceApi(api_client)
-    
+    api_instance = data_collection_service_api.DataCollectionServiceApi(api_client)
+
+    # example, this endpoint has no required or optional parameters
     try:
         api_response = api_instance.get_nodes()
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling DataCollectionServiceApi->get_nodes: %s\n" % e)
 ```
 
@@ -105,7 +105,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 
@@ -124,17 +124,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_types**
-> file get_types()
+> file_type get_types()
 
 
 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import data_collection_service_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -146,12 +145,13 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.DataCollectionServiceApi(api_client)
-    
+    api_instance = data_collection_service_api.DataCollectionServiceApi(api_client)
+
+    # example, this endpoint has no required or optional parameters
     try:
         api_response = api_instance.get_types()
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling DataCollectionServiceApi->get_types: %s\n" % e)
 ```
 
@@ -160,7 +160,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 

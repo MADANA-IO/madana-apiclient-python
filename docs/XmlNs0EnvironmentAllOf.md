@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**content** | **list[str]** |  | [optional] 
+**content** | **[str]** |  | [optional] 
 **default_run_configuration** | [**XmlNs0RunConfig**](XmlNs0RunConfig.md) |  | [optional] 
 **description** | **str** |  | [optional] 
 **ipfs_hash** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
-**packages** | **list[str]** |  | [optional] 
+**packages** | **[str]** |  | [optional] 
 **published** | **bool** |  | [optional] 
 **root_hash_offset** | **str** |  | [optional] 
 **roothash** | **str** |  | [optional] 

@@ -8,17 +8,16 @@ Method | HTTP request | Description
 
 
 # **get_nodes3**
-> file get_nodes3()
+> file_type get_nodes3()
 
 
 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import organization_service_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -30,12 +29,13 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.OrganizationServiceApi(api_client)
-    
+    api_instance = organization_service_api.OrganizationServiceApi(api_client)
+
+    # example, this endpoint has no required or optional parameters
     try:
         api_response = api_instance.get_nodes3()
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling OrganizationServiceApi->get_nodes3: %s\n" % e)
 ```
 
@@ -44,7 +44,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 

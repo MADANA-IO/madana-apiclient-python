@@ -11,17 +11,16 @@ Method | HTTP request | Description
 
 
 # **activate_user**
-> file activate_user(token)
+> file_type activate_user(token)
 
 
 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import account_service_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -33,13 +32,14 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.AccountServiceApi(api_client)
-    token = 'token_example' # str | 
+    api_instance = account_service_api.AccountServiceApi(api_client)
+    token = "token_example" # str | 
 
+    # example passing only required values which don't have defaults set
     try:
         api_response = api_instance.activate_user(token)
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling AccountServiceApi->activate_user: %s\n" % e)
 ```
 
@@ -47,11 +47,11 @@ with madana_apiclient.ApiClient() as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **token** | **str**|  | 
+ **token** | **str**|  |
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 
@@ -70,7 +70,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_password_reset**
-> file create_password_reset(body=body)
+> file_type create_password_reset()
 
 Sends an Password reset mail to the given MailAddress.
 
@@ -79,10 +79,10 @@ Sends an Password reset mail to the given MailAddress
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import account_service_api
+from madana_apiclient.model.json_mdn_mail_address import JsonMDNMailAddress
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -94,14 +94,18 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.AccountServiceApi(api_client)
-    body = madana_apiclient.JsonMDNMailAddress() # JsonMDNMailAddress | - the MaiAddress under which the user has signed up (optional)
+    api_instance = account_service_api.AccountServiceApi(api_client)
+    body = JsonMDNMailAddress(
+        mail="mail_example",
+    ) # JsonMDNMailAddress | - the MaiAddress under which the user has signed up (optional)
 
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
         # Sends an Password reset mail to the given MailAddress.
         api_response = api_instance.create_password_reset(body=body)
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling AccountServiceApi->create_password_reset: %s\n" % e)
 ```
 
@@ -109,11 +113,11 @@ with madana_apiclient.ApiClient() as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**JsonMDNMailAddress**](JsonMDNMailAddress.md)| - the MaiAddress under which the user has signed up | [optional] 
+ **body** | [**JsonMDNMailAddress**](JsonMDNMailAddress.md)| - the MaiAddress under which the user has signed up | [optional]
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 
@@ -132,7 +136,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **request_verification_mail**
-> dict(str, object) request_verification_mail()
+> {str: ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},)} request_verification_mail()
 
 Used to request a new  activation-mail for the user.
 
@@ -141,10 +145,9 @@ Used to request a new  activation-mail for the user
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import account_service_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -156,13 +159,14 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.AccountServiceApi(api_client)
-    
+    api_instance = account_service_api.AccountServiceApi(api_client)
+
+    # example, this endpoint has no required or optional parameters
     try:
         # Used to request a new  activation-mail for the user.
         api_response = api_instance.request_verification_mail()
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling AccountServiceApi->request_verification_mail: %s\n" % e)
 ```
 
@@ -171,7 +175,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**dict(str, object)**
+**{str: ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},)}**
 
 ### Authorization
 
@@ -191,7 +195,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_password**
-> file update_password(body=body)
+> file_type update_password()
 
 Receives the Password reset and tries to set the provided password for the user.
 
@@ -200,10 +204,10 @@ Receives the Password reset and tries to set the provided password for the user.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import account_service_api
+from madana_apiclient.model.json_mdn_password_reset import JsonMDNPasswordReset
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -215,14 +219,20 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.AccountServiceApi(api_client)
-    body = madana_apiclient.JsonMDNPasswordReset() # JsonMDNPasswordReset | - the MDN_PasswordReset Object (optional)
+    api_instance = account_service_api.AccountServiceApi(api_client)
+    body = JsonMDNPasswordReset(
+        password="password_example",
+        mail="mail_example",
+        token="token_example",
+    ) # JsonMDNPasswordReset | - the MDN_PasswordReset Object (optional)
 
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
         # Receives the Password reset and tries to set the provided password for the user.
         api_response = api_instance.update_password(body=body)
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling AccountServiceApi->update_password: %s\n" % e)
 ```
 
@@ -230,11 +240,11 @@ with madana_apiclient.ApiClient() as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**JsonMDNPasswordReset**](JsonMDNPasswordReset.md)| - the MDN_PasswordReset Object | [optional] 
+ **body** | [**JsonMDNPasswordReset**](JsonMDNPasswordReset.md)| - the MDN_PasswordReset Object | [optional]
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 

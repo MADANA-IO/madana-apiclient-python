@@ -10,17 +10,16 @@ Method | HTTP request | Description
 
 
 # **get_bootstrap**
-> file get_bootstrap()
+> file_type get_bootstrap()
 
 
 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import node_service_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -32,12 +31,13 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.NodeServiceApi(api_client)
-    
+    api_instance = node_service_api.NodeServiceApi(api_client)
+
+    # example, this endpoint has no required or optional parameters
     try:
         api_response = api_instance.get_bootstrap()
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling NodeServiceApi->get_bootstrap: %s\n" % e)
 ```
 
@@ -46,7 +46,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 
@@ -65,17 +65,16 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_nodes2**
-> file get_nodes2(owner=owner)
+> file_type get_nodes2()
 
 
 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import node_service_api
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -87,13 +86,15 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.NodeServiceApi(api_client)
-    owner = 'owner_example' # str |  (optional)
+    api_instance = node_service_api.NodeServiceApi(api_client)
+    owner = "owner_example" # str |  (optional)
 
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
         api_response = api_instance.get_nodes2(owner=owner)
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling NodeServiceApi->get_nodes2: %s\n" % e)
 ```
 
@@ -101,11 +102,11 @@ with madana_apiclient.ApiClient() as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **owner** | **str**|  | [optional] 
+ **owner** | **str**|  | [optional]
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 
@@ -124,17 +125,17 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **post_node_info**
-> file post_node_info(body=body)
+> file_type post_node_info()
 
 
 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import madana_apiclient
-from madana_apiclient.rest import ApiException
+from madana_apiclient.api import node_service_api
+from madana_apiclient.model.json_node_info import JsonNodeInfo
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -146,13 +147,44 @@ configuration = madana_apiclient.Configuration(
 # Enter a context with an instance of the API client
 with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
-    api_instance = madana_apiclient.NodeServiceApi(api_client)
-    body = madana_apiclient.JsonNodeInfo() # JsonNodeInfo |  (optional)
+    api_instance = node_service_api.NodeServiceApi(api_client)
+    body = JsonNodeInfo(
+        hardware_firmware="hardware_firmware_example",
+        sgx_info=JsonSGXInfo(
+            version="version_example",
+            status="status_example",
+        ),
+        cpu_family="cpu_family_example",
+        cpu_frequency="cpu_frequency_example",
+        cpu_logical_count=1,
+        processors=[
+            "processors_example",
+        ],
+        cpu_physical_cores=1,
+        operating_system_uptime=3.14,
+        status="status_example",
+        owner="owner_example",
+        cpu_model="cpu_model_example",
+        memory="memory_example",
+        connection_url="connection_url_example",
+        public_key="public_key_example",
+        hardware_baseboard="hardware_baseboard_example",
+        operating_system="operating_system_example",
+        ipfs_info=JsonIPFSSystemInfo(
+            agent_version="agent_version_example",
+            id="id_example",
+            protocol_version="protocol_version_example",
+            public_key="public_key_example",
+            swarm_connection="swarm_connection_example",
+        ),
+    ) # JsonNodeInfo |  (optional)
 
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
         api_response = api_instance.post_node_info(body=body)
         pprint(api_response)
-    except ApiException as e:
+    except madana_apiclient.ApiException as e:
         print("Exception when calling NodeServiceApi->post_node_info: %s\n" % e)
 ```
 
@@ -160,11 +192,11 @@ with madana_apiclient.ApiClient() as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**JsonNodeInfo**](JsonNodeInfo.md)|  | [optional] 
+ **body** | [**JsonNodeInfo**](JsonNodeInfo.md)|  | [optional]
 
 ### Return type
 
-**file**
+**file_type**
 
 ### Authorization
 
