@@ -149,34 +149,34 @@ with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = node_service_api.NodeServiceApi(api_client)
     body = JsonNodeInfo(
-        connection_url="connection_url_example",
-        cpu_family="cpu_family_example",
-        cpu_frequency="cpu_frequency_example",
-        cpu_model="cpu_model_example",
-        public_key="public_key_example",
-        hardware_baseboard="hardware_baseboard_example",
-        operating_system_uptime=3.14,
-        cpu_logical_count=1,
-        memory="memory_example",
-        operating_system="operating_system_example",
         processors=[
             "processors_example",
         ],
+        cpu_logical_count=1,
+        operating_system="operating_system_example",
+        operating_system_uptime=3.14,
         sgx_info=JsonSGXInfo(
-            status="status_example",
             version="version_example",
+            status="status_example",
         ),
+        status="status_example",
+        memory="memory_example",
+        hardware_firmware="hardware_firmware_example",
+        cpu_model="cpu_model_example",
+        connection_url="connection_url_example",
+        hardware_baseboard="hardware_baseboard_example",
         cpu_physical_cores=1,
+        cpu_frequency="cpu_frequency_example",
+        owner="owner_example",
         ipfs_info=JsonIPFSSystemInfo(
-            public_key="public_key_example",
-            swarm_connection="swarm_connection_example",
             id="id_example",
             agent_version="agent_version_example",
+            public_key="public_key_example",
+            swarm_connection="swarm_connection_example",
             protocol_version="protocol_version_example",
         ),
-        owner="owner_example",
-        status="status_example",
-        hardware_firmware="hardware_firmware_example",
+        public_key="public_key_example",
+        cpu_family="cpu_family_example",
     ) # JsonNodeInfo |  (optional)
 
     # example passing only required values which don't have defaults set
