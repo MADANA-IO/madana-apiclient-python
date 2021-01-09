@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **internal_ident** | **str** |  | [optional] 
 **internal_remote_control_server** | **str** |  | [optional] 
 **internal_wireguard_server** | **str** |  | [optional] 
+**kubernetes_enclave** | [**XmlNs0KubernetesEnclave**](XmlNs0KubernetesEnclave.md) |  | [optional] 
 **port_mapping** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | [optional] 
 **ports** | [**[XmlNs0EnclavePort]**](XmlNs0EnclavePort.md) |  | [optional] 
 **process** | [**XmlNs0Process**](XmlNs0Process.md) |  | [optional] 

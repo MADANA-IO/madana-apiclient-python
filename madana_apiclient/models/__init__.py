@@ -1,5 +1,3 @@
-# coding: utf-8
-
 # flake8: noqa
 
 # import all models into this package
@@ -21,6 +19,8 @@ from madana_apiclient.model.json_enclave_running_attestation_approval_all_of imp
 from madana_apiclient.model.json_environment import JsonEnvironment
 from madana_apiclient.model.json_environment_publishing_request import JsonEnvironmentPublishingRequest
 from madana_apiclient.model.json_ipfs_system_info import JsonIPFSSystemInfo
+from madana_apiclient.model.json_kubernetes_enclave import JsonKubernetesEnclave
+from madana_apiclient.model.json_kubernetes_enclave_all_of import JsonKubernetesEnclaveAllOf
 from madana_apiclient.model.json_mdna_user_object import JsonMDNAUserObject
 from madana_apiclient.model.json_mdn_certificate import JsonMDNCertificate
 from madana_apiclient.model.json_mdn_data import JsonMDNData
@@ -43,6 +43,15 @@ from madana_apiclient.model.json_run_config import JsonRunConfig
 from madana_apiclient.model.json_sgx_info import JsonSGXInfo
 from madana_apiclient.model.json_signed_data import JsonSignedData
 from madana_apiclient.model.json_signed_data_utils import JsonSignedDataUtils
+from madana_apiclient.model.json_v1_event import JsonV1Event
+from madana_apiclient.model.json_v1_event_list import JsonV1EventList
+from madana_apiclient.model.json_v1_event_series import JsonV1EventSeries
+from madana_apiclient.model.json_v1_event_source import JsonV1EventSource
+from madana_apiclient.model.json_v1_list_meta import JsonV1ListMeta
+from madana_apiclient.model.json_v1_managed_fields_entry import JsonV1ManagedFieldsEntry
+from madana_apiclient.model.json_v1_object_meta import JsonV1ObjectMeta
+from madana_apiclient.model.json_v1_object_reference import JsonV1ObjectReference
+from madana_apiclient.model.json_v1_owner_reference import JsonV1OwnerReference
 from madana_apiclient.model.json_wireguard_interface import JsonWireguardInterface
 from madana_apiclient.model.json_wireguard_interface_all_of import JsonWireguardInterfaceAllOf
 from madana_apiclient.model.xml_ns0_disk_config import XmlNs0DiskConfig
@@ -60,6 +69,8 @@ from madana_apiclient.model.xml_ns0_environment_all_of import XmlNs0EnvironmentA
 from madana_apiclient.model.xml_ns0_ipfs_system_info import XmlNs0IPFSSystemInfo
 from madana_apiclient.model.xml_ns0_ipfs_system_info_all_of import XmlNs0IPFSSystemInfoAllOf
 from madana_apiclient.model.xml_ns0_input_stream import XmlNs0InputStream
+from madana_apiclient.model.xml_ns0_kubernetes_enclave import XmlNs0KubernetesEnclave
+from madana_apiclient.model.xml_ns0_kubernetes_enclave_all_of import XmlNs0KubernetesEnclaveAllOf
 from madana_apiclient.model.xml_ns0_mdn_setting import XmlNs0MDNSetting
 from madana_apiclient.model.xml_ns0_mdn_setting_all_of import XmlNs0MDNSettingAllOf
 from madana_apiclient.model.xml_ns0_mdn_user_profile_image import XmlNs0MDNUserProfileImage
