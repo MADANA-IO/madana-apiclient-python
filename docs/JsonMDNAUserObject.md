@@ -4,9 +4,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**activated** | **str** |  | [optional] 
 **last_active** | **str** |  | [optional] 
 **created** | **str** |  | [optional] 
-**activated** | **str** |  | [optional] 
 **image** | **str** |  | [optional] 
 **user_name** | **str** |  | [optional] 
 
