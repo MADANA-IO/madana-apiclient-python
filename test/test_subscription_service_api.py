@@ -8,26 +8,31 @@
 """
 
 
-import sys
 import unittest
 
 import madana_apiclient
-from madana_apiclient.model.json_v1_object_reference import JsonV1ObjectReference
+from madana_apiclient.api.subscription_service_api import SubscriptionServiceApi  # noqa: E501
 
 
-class TestJsonV1ObjectReference(unittest.TestCase):
-    """JsonV1ObjectReference unit test stubs"""
+class TestSubscriptionServiceApi(unittest.TestCase):
+    """SubscriptionServiceApi unit test stubs"""
 
     def setUp(self):
-        pass
+        self.api = SubscriptionServiceApi()  # noqa: E501
 
     def tearDown(self):
         pass
 
-    def testJsonV1ObjectReference(self):
-        """Test JsonV1ObjectReference"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = JsonV1ObjectReference()  # noqa: E501
+    def test_add_free_subscription(self):
+        """Test case for add_free_subscription
+
+        """
+        pass
+
+    def test_get_application(self):
+        """Test case for get_application
+
+        """
         pass
 
 

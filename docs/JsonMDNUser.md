@@ -4,17 +4,17 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**activated** | **str** |  | [optional] 
-**last_active** | **str** |  | [optional] 
-**created** | **str** |  | [optional] 
-**image** | **str** |  | [optional] 
 **user_name** | **str** |  | [optional] 
+**last_active** | **str** |  | [optional] 
+**activated** | **str** |  | [optional] 
+**image** | **str** |  | [optional] 
+**created** | **str** |  | [optional] 
+**last_name** | **str** |  | [optional] 
 **credentials** | [**JsonMDNUserCredentials**](JsonMDNUserCredentials.md) |  | [optional] 
 **social_accounts** | [**[JsonMDNSocialUserObject]**](JsonMDNSocialUserObject.md) |  | [optional] 
+**first_name** | **str** |  | [optional] 
 **mail** | **str** |  | [optional] 
 **settings** | [**[JsonMDNUserSetting]**](JsonMDNUserSetting.md) |  | [optional] 
-**last_name** | **str** |  | [optional] 
-**first_name** | **str** |  | [optional] 
 **guid** | **str** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

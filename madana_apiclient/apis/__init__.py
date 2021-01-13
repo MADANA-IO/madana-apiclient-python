@@ -25,5 +25,6 @@ from madana_apiclient.api.organization_service_api import OrganizationServiceApi
 from madana_apiclient.api.request_service_api import RequestServiceApi
 from madana_apiclient.api.social_platform_service_api import SocialPlatformServiceApi
 from madana_apiclient.api.social_service_api import SocialServiceApi
+from madana_apiclient.api.subscription_service_api import SubscriptionServiceApi
 from madana_apiclient.api.system_service_api import SystemServiceApi
 from madana_apiclient.api.user_service_api import UserServiceApi

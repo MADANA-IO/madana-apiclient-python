@@ -59,6 +59,7 @@ docs/OrganizationServiceApi.md
 docs/RequestServiceApi.md
 docs/SocialPlatformServiceApi.md
 docs/SocialServiceApi.md
+docs/SubscriptionServiceApi.md
 docs/SystemServiceApi.md
 docs/UserServiceApi.md
 docs/XmlNs0DiskConfig.md
@@ -111,6 +112,7 @@ madana_apiclient/api/organization_service_api.py
 madana_apiclient/api/request_service_api.py
 madana_apiclient/api/social_platform_service_api.py
 madana_apiclient/api/social_service_api.py
+madana_apiclient/api/subscription_service_api.py
 madana_apiclient/api/system_service_api.py
 madana_apiclient/api/user_service_api.py
 madana_apiclient/api_client.py
@@ -264,6 +266,7 @@ test/test_organization_service_api.py
 test/test_request_service_api.py
 test/test_social_platform_service_api.py
 test/test_social_service_api.py
+test/test_subscription_service_api.py
 test/test_system_service_api.py
 test/test_user_service_api.py
 test/test_xml_ns0_disk_config.py
