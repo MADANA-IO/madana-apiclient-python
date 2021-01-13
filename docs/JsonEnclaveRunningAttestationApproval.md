@@ -4,8 +4,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**enclave_process** | [**JsonEnclaveProcess**](JsonEnclaveProcess.md) |  | [optional] 
 **node_info** | [**JsonNodeInfo**](JsonNodeInfo.md) |  | [optional] 
+**enclave_process** | [**JsonEnclaveProcess**](JsonEnclaveProcess.md) |  | [optional] 
 **approved** | **str** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

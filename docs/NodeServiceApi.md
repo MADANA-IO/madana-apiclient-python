@@ -149,33 +149,33 @@ with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = node_service_api.NodeServiceApi(api_client)
     body = JsonNodeInfo(
-        memory="memory_example",
-        cpu_family="cpu_family_example",
-        owner="owner_example",
-        processors=[
-            "processors_example",
-        ],
-        cpu_frequency="cpu_frequency_example",
-        cpu_physical_cores=1,
-        cpu_logical_count=1,
-        ipfs_info=JsonIPFSSystemInfo(
-            id="id_example",
-            protocol_version="protocol_version_example",
-            agent_version="agent_version_example",
-            swarm_connection="swarm_connection_example",
-            public_key="public_key_example",
-        ),
-        cpu_model="cpu_model_example",
-        operating_system_uptime=3.14,
-        operating_system="operating_system_example",
-        hardware_baseboard="hardware_baseboard_example",
         hardware_firmware="hardware_firmware_example",
-        connection_url="connection_url_example",
         public_key="public_key_example",
-        status="status_example",
+        cpu_logical_count=1,
+        cpu_physical_cores=1,
+        memory="memory_example",
+        hardware_baseboard="hardware_baseboard_example",
+        operating_system_uptime=3.14,
+        cpu_frequency="cpu_frequency_example",
+        connection_url="connection_url_example",
         sgx_info=JsonSGXInfo(
             status="status_example",
             version="version_example",
+        ),
+        owner="owner_example",
+        operating_system="operating_system_example",
+        status="status_example",
+        cpu_model="cpu_model_example",
+        cpu_family="cpu_family_example",
+        processors=[
+            "processors_example",
+        ],
+        ipfs_info=JsonIPFSSystemInfo(
+            id="id_example",
+            agent_version="agent_version_example",
+            protocol_version="protocol_version_example",
+            swarm_connection="swarm_connection_example",
+            public_key="public_key_example",
         ),
     ) # JsonNodeInfo |  (optional)
 
