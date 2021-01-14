@@ -20,6 +20,7 @@ from madana_apiclient.api.certificate_service_api import CertificateServiceApi
 from madana_apiclient.api.data_collection_service_api import DataCollectionServiceApi
 from madana_apiclient.api.enclave_service_api import EnclaveServiceApi
 from madana_apiclient.api.environment_service_api import EnvironmentServiceApi
+from madana_apiclient.api.invoice_service_api import InvoiceServiceApi
 from madana_apiclient.api.node_service_api import NodeServiceApi
 from madana_apiclient.api.organization_service_api import OrganizationServiceApi
 from madana_apiclient.api.request_service_api import RequestServiceApi

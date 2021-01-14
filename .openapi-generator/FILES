@@ -9,6 +9,7 @@ docs/CertificateServiceApi.md
 docs/DataCollectionServiceApi.md
 docs/EnclaveServiceApi.md
 docs/EnvironmentServiceApi.md
+docs/InvoiceServiceApi.md
 docs/JsonDiskConfig.md
 docs/JsonEnclavePort.md
 docs/JsonEnclaveProcess.md
@@ -107,6 +108,7 @@ madana_apiclient/api/certificate_service_api.py
 madana_apiclient/api/data_collection_service_api.py
 madana_apiclient/api/enclave_service_api.py
 madana_apiclient/api/environment_service_api.py
+madana_apiclient/api/invoice_service_api.py
 madana_apiclient/api/node_service_api.py
 madana_apiclient/api/organization_service_api.py
 madana_apiclient/api/request_service_api.py
@@ -216,6 +218,7 @@ test/test_certificate_service_api.py
 test/test_data_collection_service_api.py
 test/test_enclave_service_api.py
 test/test_environment_service_api.py
+test/test_invoice_service_api.py
 test/test_json_disk_config.py
 test/test_json_enclave_port.py
 test/test_json_enclave_process.py

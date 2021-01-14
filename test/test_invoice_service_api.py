@@ -11,32 +11,20 @@
 import unittest
 
 import madana_apiclient
-from madana_apiclient.api.subscription_service_api import SubscriptionServiceApi  # noqa: E501
+from madana_apiclient.api.invoice_service_api import InvoiceServiceApi  # noqa: E501
 
 
-class TestSubscriptionServiceApi(unittest.TestCase):
-    """SubscriptionServiceApi unit test stubs"""
+class TestInvoiceServiceApi(unittest.TestCase):
+    """InvoiceServiceApi unit test stubs"""
 
     def setUp(self):
-        self.api = SubscriptionServiceApi()  # noqa: E501
+        self.api = InvoiceServiceApi()  # noqa: E501
 
     def tearDown(self):
         pass
 
-    def test_add_free_subscription(self):
-        """Test case for add_free_subscription
-
-        """
-        pass
-
-    def test_add_pass_trial_subscription(self):
-        """Test case for add_pass_trial_subscription
-
-        """
-        pass
-
-    def test_get_application(self):
-        """Test case for get_application
+    def test_get_active_saa_s_subscriptions(self):
+        """Test case for get_active_saa_s_subscriptions
 
         """
         pass
