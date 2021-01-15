@@ -222,8 +222,8 @@ with madana_apiclient.ApiClient() as api_client:
     api_instance = account_service_api.AccountServiceApi(api_client)
     body = JsonMDNPasswordReset(
         token="token_example",
-        password="password_example",
         mail="mail_example",
+        password="password_example",
     ) # JsonMDNPasswordReset | - the MDN_PasswordReset Object (optional)
 
     # example passing only required values which don't have defaults set

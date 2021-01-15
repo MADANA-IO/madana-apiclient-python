@@ -484,8 +484,8 @@ with madana_apiclient.ApiClient() as api_client:
     api_instance = user_service_api.UserServiceApi(api_client)
     username = "username_example" # str | 
     body = JsonMDNUserProfileImage(
-        id="id_example",
         image="image_example",
+        id="id_example",
     ) # JsonMDNUserProfileImage |  (optional)
 
     # example passing only required values which don't have defaults set
