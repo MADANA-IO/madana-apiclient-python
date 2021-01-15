@@ -149,34 +149,34 @@ with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = node_service_api.NodeServiceApi(api_client)
     body = JsonNodeInfo(
-        hardware_baseboard="hardware_baseboard_example",
-        operating_system="operating_system_example",
-        status="status_example",
-        memory="memory_example",
-        sgx_info=JsonSGXInfo(
-            status="status_example",
-            version="version_example",
-        ),
-        operating_system_uptime=3.14,
-        ipfs_info=JsonIPFSSystemInfo(
-            swarm_connection="swarm_connection_example",
-            agent_version="agent_version_example",
-            public_key="public_key_example",
-            protocol_version="protocol_version_example",
-            id="id_example",
-        ),
-        public_key="public_key_example",
-        cpu_physical_cores=1,
         cpu_model="cpu_model_example",
+        status="status_example",
         processors=[
             "processors_example",
         ],
+        public_key="public_key_example",
+        memory="memory_example",
         connection_url="connection_url_example",
-        hardware_firmware="hardware_firmware_example",
+        operating_system="operating_system_example",
+        operating_system_uptime=3.14,
         cpu_family="cpu_family_example",
+        sgx_info=JsonSGXInfo(
+            version="version_example",
+            status="status_example",
+        ),
+        cpu_physical_cores=1,
         cpu_frequency="cpu_frequency_example",
-        cpu_logical_count=1,
         owner="owner_example",
+        ipfs_info=JsonIPFSSystemInfo(
+            public_key="public_key_example",
+            protocol_version="protocol_version_example",
+            agent_version="agent_version_example",
+            swarm_connection="swarm_connection_example",
+            id="id_example",
+        ),
+        cpu_logical_count=1,
+        hardware_firmware="hardware_firmware_example",
+        hardware_baseboard="hardware_baseboard_example",
     ) # JsonNodeInfo |  (optional)
 
     # example passing only required values which don't have defaults set
