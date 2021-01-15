@@ -4,23 +4,23 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**last_timestamp** | **float** |  | [optional] 
-**type** | **str** |  | [optional] 
-**related** | [**JsonV1ObjectReference**](JsonV1ObjectReference.md) |  | [optional] 
-**series** | [**JsonV1EventSeries**](JsonV1EventSeries.md) |  | [optional] 
-**source** | [**JsonV1EventSource**](JsonV1EventSource.md) |  | [optional] 
+**event_time** | **float** |  | [optional] 
 **reason** | **str** |  | [optional] 
-**api_version** | **str** |  | [optional] 
+**source** | [**JsonV1EventSource**](JsonV1EventSource.md) |  | [optional] 
+**action** | **str** |  | [optional] 
 **reporting_component** | **str** |  | [optional] 
-**kind** | **str** |  | [optional] 
+**count** | **float** |  | [optional] 
+**involved_object** | [**JsonV1ObjectReference**](JsonV1ObjectReference.md) |  | [optional] 
+**type** | **str** |  | [optional] 
+**api_version** | **str** |  | [optional] 
+**related** | [**JsonV1ObjectReference**](JsonV1ObjectReference.md) |  | [optional] 
 **reporting_instance** | **str** |  | [optional] 
 **metadata** | [**JsonV1ObjectMeta**](JsonV1ObjectMeta.md) |  | [optional] 
-**message** | **str** |  | [optional] 
-**involved_object** | [**JsonV1ObjectReference**](JsonV1ObjectReference.md) |  | [optional] 
-**event_time** | **float** |  | [optional] 
+**last_timestamp** | **float** |  | [optional] 
+**kind** | **str** |  | [optional] 
+**series** | [**JsonV1EventSeries**](JsonV1EventSeries.md) |  | [optional] 
 **first_timestamp** | **float** |  | [optional] 
-**count** | **float** |  | [optional] 
-**action** | **str** |  | [optional] 
+**message** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
