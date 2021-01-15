@@ -4,8 +4,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**resource_version** | **str** |  | [optional] 
 **remaining_item_count** | **float** |  | [optional] 
+**resource_version** | **str** |  | [optional] 
 **self_link** | **str** |  | [optional] 
 **_continue** | **str** |  | [optional] 
 

@@ -190,8 +190,8 @@ with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = authentication_service_api.AuthenticationServiceApi(api_client)
     body = JsonMDNUserCredentials(
-        password="password_example",
         username="username_example",
+        password="password_example",
     ) # JsonMDNUserCredentials | the credentials used to validate the user (optional)
 
     # example passing only required values which don't have defaults set
