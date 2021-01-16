@@ -4,12 +4,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**controller** | **bool** |  | [optional] 
+**block_owner_deletion** | **bool** |  | [optional] 
+**api_version** | **str** |  | [optional] 
+**name** | **str** |  | [optional] 
 **kind** | **str** |  | [optional] 
 **uid** | **str** |  | [optional] 
-**name** | **str** |  | [optional] 
-**api_version** | **str** |  | [optional] 
-**block_owner_deletion** | **bool** |  | [optional] 
-**controller** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
