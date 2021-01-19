@@ -149,34 +149,34 @@ with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = node_service_api.NodeServiceApi(api_client)
     body = JsonNodeInfo(
-        ipfs_info=JsonIPFSSystemInfo(
-            id="id_example",
-            swarm_connection="swarm_connection_example",
-            protocol_version="protocol_version_example",
-            public_key="public_key_example",
-            agent_version="agent_version_example",
-        ),
-        cpu_model="cpu_model_example",
+        public_key="public_key_example",
+        cpu_logical_count=1,
         connection_url="connection_url_example",
-        operating_system="operating_system_example",
         processors=[
             "processors_example",
         ],
-        cpu_frequency="cpu_frequency_example",
-        status="status_example",
-        operating_system_uptime=3.14,
-        cpu_physical_cores=1,
-        owner="owner_example",
-        hardware_baseboard="hardware_baseboard_example",
-        sgx_info=JsonSGXInfo(
-            status="status_example",
-            version="version_example",
-        ),
+        operating_system="operating_system_example",
         cpu_family="cpu_family_example",
-        memory="memory_example",
-        cpu_logical_count=1,
+        cpu_physical_cores=1,
+        sgx_info=JsonSGXInfo(
+            version="version_example",
+            status="status_example",
+        ),
+        cpu_frequency="cpu_frequency_example",
+        ipfs_info=JsonIPFSSystemInfo(
+            protocol_version="protocol_version_example",
+            swarm_connection="swarm_connection_example",
+            public_key="public_key_example",
+            agent_version="agent_version_example",
+            id="id_example",
+        ),
+        cpu_model="cpu_model_example",
         hardware_firmware="hardware_firmware_example",
-        public_key="public_key_example",
+        hardware_baseboard="hardware_baseboard_example",
+        operating_system_uptime=3.14,
+        owner="owner_example",
+        status="status_example",
+        memory="memory_example",
     ) # JsonNodeInfo |  (optional)
 
     # example passing only required values which don't have defaults set
