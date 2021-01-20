@@ -149,34 +149,34 @@ with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = node_service_api.NodeServiceApi(api_client)
     body = JsonNodeInfo(
-        processors=[
-            "processors_example",
-        ],
-        hardware_baseboard="hardware_baseboard_example",
-        sgx_info=JsonSGXInfo(
-            version="version_example",
-            status="status_example",
-        ),
-        connection_url="connection_url_example",
-        owner="owner_example",
-        cpu_model="cpu_model_example",
-        hardware_firmware="hardware_firmware_example",
-        memory="memory_example",
-        cpu_logical_count=1,
-        operating_system="operating_system_example",
         cpu_physical_cores=1,
-        public_key="public_key_example",
-        cpu_frequency="cpu_frequency_example",
-        operating_system_uptime=3.14,
         cpu_family="cpu_family_example",
-        status="status_example",
+        hardware_baseboard="hardware_baseboard_example",
+        cpu_frequency="cpu_frequency_example",
+        cpu_logical_count=1,
+        owner="owner_example",
         ipfs_info=JsonIPFSSystemInfo(
             protocol_version="protocol_version_example",
             id="id_example",
             agent_version="agent_version_example",
-            swarm_connection="swarm_connection_example",
             public_key="public_key_example",
+            swarm_connection="swarm_connection_example",
         ),
+        cpu_model="cpu_model_example",
+        public_key="public_key_example",
+        processors=[
+            "processors_example",
+        ],
+        memory="memory_example",
+        operating_system="operating_system_example",
+        hardware_firmware="hardware_firmware_example",
+        connection_url="connection_url_example",
+        status="status_example",
+        sgx_info=JsonSGXInfo(
+            status="status_example",
+            version="version_example",
+        ),
+        operating_system_uptime=3.14,
     ) # JsonNodeInfo |  (optional)
 
     # example passing only required values which don't have defaults set
