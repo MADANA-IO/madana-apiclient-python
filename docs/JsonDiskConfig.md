@@ -4,8 +4,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**roothash_offset** | **int** |  | [optional] 
 **disk** | **str** |  | [optional] 
+**roothash_offset** | **int** |  | [optional] 
 **roothash** | **str** |  | [optional] 
 **readonly** | **bool** |  | [optional] 
 
