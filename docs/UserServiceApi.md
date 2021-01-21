@@ -4,6 +4,7 @@ All URIs are relative to *http://api.madana.io/rest*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**cancel_subscription**](UserServiceApi.md#cancel_subscription) | **POST** /users/{username}/subscriptions/{planname}/cancel | 
 [**create_object**](UserServiceApi.md#create_object) | **POST** /users | Creates a new user object.
 [**delete_object**](UserServiceApi.md#delete_object) | **DELETE** /users/{username} | Deletes an User based on the provided id and securitycontext.
 [**delete_object_0**](UserServiceApi.md#delete_object_0) | **DELETE** /users/{username}/social/{platform}/{ident} | Deletes linked account from the user and securitycontext.
@@ -15,6 +16,67 @@ Method | HTTP request | Description
 [**set_settings**](UserServiceApi.md#set_settings) | **POST** /users/{username}/settings | 
 [**update_object**](UserServiceApi.md#update_object) | **PUT** /users/{username} | Updates Userproperties based on the provided user object.
 
+
+# **cancel_subscription**
+> file_type cancel_subscription(planname, username)
+
+
+
+### Example
+
+```python
+import time
+import madana_apiclient
+from madana_apiclient.api import user_service_api
+from pprint import pprint
+# Defining the host is optional and defaults to http://api.madana.io/rest
+# See configuration.py for a list of all supported configuration parameters.
+configuration = madana_apiclient.Configuration(
+    host = "http://api.madana.io/rest"
+)
+
+
+# Enter a context with an instance of the API client
+with madana_apiclient.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = user_service_api.UserServiceApi(api_client)
+    planname = "planname_example" # str | 
+    username = "username_example" # str | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.cancel_subscription(planname, username)
+        pprint(api_response)
+    except madana_apiclient.ApiException as e:
+        print("Exception when calling UserServiceApi->cancel_subscription: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **planname** | **str**|  |
+ **username** | **str**|  |
+
+### Return type
+
+**file_type**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_object**
 > file_type create_object()
