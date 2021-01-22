@@ -50,8 +50,8 @@ with madana_apiclient.ApiClient() as api_client:
     authorization = "Authorization_example" # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
     body = JsonSignedDataUtils(
         signature="signature_example",
-        fingerpint="fingerpint_example",
         data="data_example",
+        fingerpint="fingerpint_example",
     ) # JsonSignedDataUtils |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -133,8 +133,8 @@ with madana_apiclient.ApiClient() as api_client:
     authorization = "Authorization_example" # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
     body = JsonSignedDataUtils(
         signature="signature_example",
-        fingerpint="fingerpint_example",
         data="data_example",
+        fingerpint="fingerpint_example",
     ) # JsonSignedDataUtils |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -215,8 +215,8 @@ with madana_apiclient.ApiClient() as api_client:
     authorization = "Authorization_example" # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
     body = JsonSignedDataUtils(
         signature="signature_example",
-        fingerpint="fingerpint_example",
         data="data_example",
+        fingerpint="fingerpint_example",
     ) # JsonSignedDataUtils |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -1019,8 +1019,8 @@ with madana_apiclient.ApiClient() as api_client:
     authorization = "Authorization_example" # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
     body = JsonSignedDataUtils(
         signature="signature_example",
-        fingerpint="fingerpint_example",
         data="data_example",
+        fingerpint="fingerpint_example",
     ) # JsonSignedDataUtils |  (optional)
 
     # example passing only required values which don't have defaults set
