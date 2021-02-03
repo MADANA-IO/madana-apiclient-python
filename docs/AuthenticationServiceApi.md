@@ -113,8 +113,8 @@ with madana_apiclient.ApiClient() as api_client:
     api_instance = authentication_service_api.AuthenticationServiceApi(api_client)
     wallet = "wallet_example" # str | the wallet which should be authenticated
     body = JsonMDNOAuthToken(
-        token="token_example",
         verifier="verifier_example",
+        token="token_example",
     ) # JsonMDNOAuthToken | Token containing nonce and signate (optional)
 
     # example passing only required values which don't have defaults set
@@ -190,8 +190,8 @@ with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = authentication_service_api.AuthenticationServiceApi(api_client)
     body = JsonMDNUserCredentials(
-        username="username_example",
         password="password_example",
+        username="username_example",
     ) # JsonMDNUserCredentials | the credentials used to validate the user (optional)
 
     # example passing only required values which don't have defaults set
@@ -258,8 +258,8 @@ with madana_apiclient.ApiClient() as api_client:
     api_instance = authentication_service_api.AuthenticationServiceApi(api_client)
     wallet = "wallet_example" # str | the wallet which should be authenticated
     body = JsonMDNOAuthToken(
-        token="token_example",
         verifier="verifier_example",
+        token="token_example",
     ) # JsonMDNOAuthToken | Token containing nonce and signate (optional)
 
     # example passing only required values which don't have defaults set
@@ -705,8 +705,8 @@ with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = authentication_service_api.AuthenticationServiceApi(api_client)
     body = JsonMDNOAuthToken(
-        token="token_example",
         verifier="verifier_example",
+        token="token_example",
     ) # JsonMDNOAuthToken |  (optional)
 
     # example passing only required values which don't have defaults set
