@@ -4,8 +4,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**kind** | **str** |  | [optional] 
 **items** | [**[JsonV1Event]**](JsonV1Event.md) |  | [optional] 
+**kind** | **str** |  | [optional] 
 **metadata** | [**JsonV1ListMeta**](JsonV1ListMeta.md) |  | [optional] 
 **api_version** | **str** |  | [optional] 
 

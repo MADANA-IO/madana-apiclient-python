@@ -4,9 +4,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**environment_uuid** | **str** |  | [optional] 
-**ports** | [**[JsonEnclavePort]**](JsonEnclavePort.md) |  | [optional] 
 **wireguard_public_key** | **str** |  | [optional] 
+**ports** | [**[JsonEnclavePort]**](JsonEnclavePort.md) |  | [optional] 
+**environment_uuid** | **str** |  | [optional] 
 **enclave_execution_type** | **str** |  | [optional] 
 **using_default_run_config** | **bool** |  | [optional] 
 
