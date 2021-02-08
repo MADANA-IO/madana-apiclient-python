@@ -49,8 +49,8 @@ with madana_apiclient.ApiClient() as api_client:
     uuid = "uuid_example" # str | 
     authorization = "Authorization_example" # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
     body = JsonSignedDataUtils(
-        data="data_example",
         fingerpint="fingerpint_example",
+        data="data_example",
         signature="signature_example",
     ) # JsonSignedDataUtils |  (optional)
 
@@ -132,8 +132,8 @@ with madana_apiclient.ApiClient() as api_client:
     uuid = "uuid_example" # str | 
     authorization = "Authorization_example" # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
     body = JsonSignedDataUtils(
-        data="data_example",
         fingerpint="fingerpint_example",
+        data="data_example",
         signature="signature_example",
     ) # JsonSignedDataUtils |  (optional)
 
@@ -214,8 +214,8 @@ with madana_apiclient.ApiClient() as api_client:
     api_instance = request_service_api.RequestServiceApi(api_client)
     authorization = "Authorization_example" # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
     body = JsonSignedDataUtils(
-        data="data_example",
         fingerpint="fingerpint_example",
+        data="data_example",
         signature="signature_example",
     ) # JsonSignedDataUtils |  (optional)
 
@@ -1018,8 +1018,8 @@ with madana_apiclient.ApiClient() as api_client:
     uuid = "uuid_example" # str | 
     authorization = "Authorization_example" # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
     body = JsonSignedDataUtils(
-        data="data_example",
         fingerpint="fingerpint_example",
+        data="data_example",
         signature="signature_example",
     ) # JsonSignedDataUtils |  (optional)
 

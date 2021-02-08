@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**get_bootstrap**](NodeServiceApi.md#get_bootstrap) | **GET** /nodes/bootstrap | 
 [**get_nodes2**](NodeServiceApi.md#get_nodes2) | **GET** /nodes | 
 [**post_node_info**](NodeServiceApi.md#post_node_info) | **POST** /nodes | 
+[**post_node_info_0**](NodeServiceApi.md#post_node_info_0) | **POST** /nodes/create | 
 
 
 # **get_bootstrap**
@@ -149,34 +150,34 @@ with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = node_service_api.NodeServiceApi(api_client)
     body = JsonNodeInfo(
-        cpu_model="cpu_model_example",
         operating_system_uptime=3.14,
-        cpu_logical_count=1,
-        owner="owner_example",
-        operating_system="operating_system_example",
-        status="status_example",
         memory="memory_example",
-        hardware_firmware="hardware_firmware_example",
+        cpu_physical_cores=1,
+        ipfs_info=JsonIPFSSystemInfo(
+            id="id_example",
+            swarm_connection="swarm_connection_example",
+            public_key="public_key_example",
+            protocol_version="protocol_version_example",
+            agent_version="agent_version_example",
+        ),
+        cpu_logical_count=1,
+        operating_system="operating_system_example",
         cpu_frequency="cpu_frequency_example",
+        cpu_family="cpu_family_example",
+        hardware_firmware="hardware_firmware_example",
+        status="status_example",
+        cpu_model="cpu_model_example",
+        owner="owner_example",
+        connection_url="connection_url_example",
         processors=[
             "processors_example",
         ],
-        cpu_family="cpu_family_example",
-        sgx_info=JsonSGXInfo(
-            version="version_example",
-            status="status_example",
-        ),
-        public_key="public_key_example",
-        ipfs_info=JsonIPFSSystemInfo(
-            id="id_example",
-            protocol_version="protocol_version_example",
-            agent_version="agent_version_example",
-            swarm_connection="swarm_connection_example",
-            public_key="public_key_example",
-        ),
-        cpu_physical_cores=1,
-        connection_url="connection_url_example",
         hardware_baseboard="hardware_baseboard_example",
+        public_key="public_key_example",
+        sgx_info=JsonSGXInfo(
+            status="status_example",
+            version="version_example",
+        ),
     ) # JsonNodeInfo |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -193,6 +194,70 @@ with madana_apiclient.ApiClient() as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**JsonNodeInfo**](JsonNodeInfo.md)|  | [optional]
+
+### Return type
+
+**file_type**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json, application/xml
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **post_node_info_0**
+> file_type post_node_info_0()
+
+
+
+### Example
+
+```python
+import time
+import madana_apiclient
+from madana_apiclient.api import node_service_api
+from madana_apiclient.model.json_node_run_request import JsonNodeRunRequest
+from pprint import pprint
+# Defining the host is optional and defaults to http://api.madana.io/rest
+# See configuration.py for a list of all supported configuration parameters.
+configuration = madana_apiclient.Configuration(
+    host = "http://api.madana.io/rest"
+)
+
+
+# Enter a context with an instance of the API client
+with madana_apiclient.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = node_service_api.NodeServiceApi(api_client)
+    body = JsonNodeRunRequest(
+        cpu_count="cpu_count_example",
+        subdomain="subdomain_example",
+    ) # JsonNodeRunRequest |  (optional)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.post_node_info_0(body=body)
+        pprint(api_response)
+    except madana_apiclient.ApiException as e:
+        print("Exception when calling NodeServiceApi->post_node_info_0: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**JsonNodeRunRequest**](JsonNodeRunRequest.md)|  | [optional]
 
 ### Return type
 

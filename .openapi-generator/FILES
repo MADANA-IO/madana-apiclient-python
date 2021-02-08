@@ -39,6 +39,7 @@ docs/JsonMDNUserSetting.md
 docs/JsonMDNUserSettingAllOf.md
 docs/JsonNetworkInterface.md
 docs/JsonNodeInfo.md
+docs/JsonNodeRunRequest.md
 docs/JsonProcess.md
 docs/JsonRunConfig.md
 docs/JsonSGXInfo.md
@@ -151,6 +152,7 @@ madana_apiclient/model/json_mdna_user_object.py
 madana_apiclient/model/json_mdno_auth_token.py
 madana_apiclient/model/json_network_interface.py
 madana_apiclient/model/json_node_info.py
+madana_apiclient/model/json_node_run_request.py
 madana_apiclient/model/json_process.py
 madana_apiclient/model/json_run_config.py
 madana_apiclient/model/json_sgx_info.py
@@ -248,6 +250,7 @@ test/test_json_mdna_user_object.py
 test/test_json_mdno_auth_token.py
 test/test_json_network_interface.py
 test/test_json_node_info.py
+test/test_json_node_run_request.py
 test/test_json_process.py
 test/test_json_run_config.py
 test/test_json_sgx_info.py

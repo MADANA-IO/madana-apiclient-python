@@ -12,11 +12,11 @@ import sys
 import unittest
 
 import madana_apiclient
-from madana_apiclient.model.xml_ns0_ipfs_system_info_all_of import XmlNs0IPFSSystemInfoAllOf
+from madana_apiclient.model.json_node_run_request import JsonNodeRunRequest
 
 
-class TestXmlNs0IPFSSystemInfoAllOf(unittest.TestCase):
-    """XmlNs0IPFSSystemInfoAllOf unit test stubs"""
+class TestJsonNodeRunRequest(unittest.TestCase):
+    """JsonNodeRunRequest unit test stubs"""
 
     def setUp(self):
         pass
@@ -24,10 +24,10 @@ class TestXmlNs0IPFSSystemInfoAllOf(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testXmlNs0IPFSSystemInfoAllOf(self):
-        """Test XmlNs0IPFSSystemInfoAllOf"""
+    def testJsonNodeRunRequest(self):
+        """Test JsonNodeRunRequest"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = XmlNs0IPFSSystemInfoAllOf()  # noqa: E501
+        # model = JsonNodeRunRequest()  # noqa: E501
         pass
 
 

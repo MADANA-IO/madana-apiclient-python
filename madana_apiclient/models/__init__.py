@@ -38,6 +38,7 @@ from madana_apiclient.model.json_mdn_user_setting import JsonMDNUserSetting
 from madana_apiclient.model.json_mdn_user_setting_all_of import JsonMDNUserSettingAllOf
 from madana_apiclient.model.json_network_interface import JsonNetworkInterface
 from madana_apiclient.model.json_node_info import JsonNodeInfo
+from madana_apiclient.model.json_node_run_request import JsonNodeRunRequest
 from madana_apiclient.model.json_process import JsonProcess
 from madana_apiclient.model.json_run_config import JsonRunConfig
 from madana_apiclient.model.json_sgx_info import JsonSGXInfo
