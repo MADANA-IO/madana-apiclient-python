@@ -4,11 +4,79 @@ All URIs are relative to *http://api.madana.io/rest*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**create_node**](NodeServiceApi.md#create_node) | **POST** /nodes/v2 | 
 [**get_bootstrap**](NodeServiceApi.md#get_bootstrap) | **GET** /nodes/bootstrap | 
+[**get_node_v2**](NodeServiceApi.md#get_node_v2) | **GET** /nodes/v2/{ident} | 
 [**get_nodes2**](NodeServiceApi.md#get_nodes2) | **GET** /nodes | 
+[**get_nodes_v2**](NodeServiceApi.md#get_nodes_v2) | **GET** /nodes/v2 | Returns UUIDs of existing analyses.
+[**kill_node**](NodeServiceApi.md#kill_node) | **POST** /nodes/v2/{ident}/kill | 
 [**post_node_info**](NodeServiceApi.md#post_node_info) | **POST** /nodes | 
 [**post_node_info_0**](NodeServiceApi.md#post_node_info_0) | **POST** /nodes/create | 
 
+
+# **create_node**
+> file_type create_node()
+
+
+
+### Example
+
+```python
+import time
+import madana_apiclient
+from madana_apiclient.api import node_service_api
+from madana_apiclient.model.json_node_run_request import JsonNodeRunRequest
+from pprint import pprint
+# Defining the host is optional and defaults to http://api.madana.io/rest
+# See configuration.py for a list of all supported configuration parameters.
+configuration = madana_apiclient.Configuration(
+    host = "http://api.madana.io/rest"
+)
+
+
+# Enter a context with an instance of the API client
+with madana_apiclient.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = node_service_api.NodeServiceApi(api_client)
+    body = JsonNodeRunRequest(
+        subdomain="subdomain_example",
+        cpu_count="cpu_count_example",
+    ) # JsonNodeRunRequest |  (optional)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.create_node(body=body)
+        pprint(api_response)
+    except madana_apiclient.ApiException as e:
+        print("Exception when calling NodeServiceApi->create_node: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**JsonNodeRunRequest**](JsonNodeRunRequest.md)|  | [optional]
+
+### Return type
+
+**file_type**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json, application/xml
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_bootstrap**
 > file_type get_bootstrap()
@@ -44,6 +112,65 @@ with madana_apiclient.ApiClient() as api_client:
 
 ### Parameters
 This endpoint does not need any parameter.
+
+### Return type
+
+**file_type**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_node_v2**
+> file_type get_node_v2(ident)
+
+
+
+### Example
+
+```python
+import time
+import madana_apiclient
+from madana_apiclient.api import node_service_api
+from pprint import pprint
+# Defining the host is optional and defaults to http://api.madana.io/rest
+# See configuration.py for a list of all supported configuration parameters.
+configuration = madana_apiclient.Configuration(
+    host = "http://api.madana.io/rest"
+)
+
+
+# Enter a context with an instance of the API client
+with madana_apiclient.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = node_service_api.NodeServiceApi(api_client)
+    ident = "ident_example" # str | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.get_node_v2(ident)
+        pprint(api_response)
+    except madana_apiclient.ApiException as e:
+        print("Exception when calling NodeServiceApi->get_node_v2: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ident** | **str**|  |
 
 ### Return type
 
@@ -125,6 +252,137 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_nodes_v2**
+> file_type get_nodes_v2()
+
+Returns UUIDs of existing analyses.
+
+Returns UUIDs of existing analyses.
+
+### Example
+
+```python
+import time
+import madana_apiclient
+from madana_apiclient.api import node_service_api
+from pprint import pprint
+# Defining the host is optional and defaults to http://api.madana.io/rest
+# See configuration.py for a list of all supported configuration parameters.
+configuration = madana_apiclient.Configuration(
+    host = "http://api.madana.io/rest"
+)
+
+
+# Enter a context with an instance of the API client
+with madana_apiclient.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = node_service_api.NodeServiceApi(api_client)
+    authorization = "Authorization_example" # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
+    created = "true" # str | - if Queryparam \"created=true\" only the UUIDs of own Requests are shown (optional) if omitted the server will use the default value of "true"
+    limit = "30" # str | Used for offset pagination. Limit/Offset Paging would look like GET /request?limit=20&offset=100. This query would return the 20 rows starting with the 100th row (optional) if omitted the server will use the default value of "30"
+    offset = "0" # str | Used for offset pagination. Limit/Offset Paging would look like GET /request?limit=20&offset=100. This query would return the 20 rows starting with the 100th row (optional) if omitted the server will use the default value of "0"
+    status = "status_example" # str |  (optional)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Returns UUIDs of existing analyses.
+        api_response = api_instance.get_nodes_v2(authorization=authorization, created=created, limit=limit, offset=offset, status=status)
+        pprint(api_response)
+    except madana_apiclient.ApiException as e:
+        print("Exception when calling NodeServiceApi->get_nodes_v2: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **str**| Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c | [optional]
+ **created** | **str**| - if Queryparam \&quot;created&#x3D;true\&quot; only the UUIDs of own Requests are shown | [optional] if omitted the server will use the default value of "true"
+ **limit** | **str**| Used for offset pagination. Limit/Offset Paging would look like GET /request?limit&#x3D;20&amp;offset&#x3D;100. This query would return the 20 rows starting with the 100th row | [optional] if omitted the server will use the default value of "30"
+ **offset** | **str**| Used for offset pagination. Limit/Offset Paging would look like GET /request?limit&#x3D;20&amp;offset&#x3D;100. This query would return the 20 rows starting with the 100th row | [optional] if omitted the server will use the default value of "0"
+ **status** | **str**|  | [optional]
+
+### Return type
+
+**file_type**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | If the actions could be loaded |  -  |
+**500** | If an servsided error occurs |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **kill_node**
+> file_type kill_node(ident)
+
+
+
+### Example
+
+```python
+import time
+import madana_apiclient
+from madana_apiclient.api import node_service_api
+from pprint import pprint
+# Defining the host is optional and defaults to http://api.madana.io/rest
+# See configuration.py for a list of all supported configuration parameters.
+configuration = madana_apiclient.Configuration(
+    host = "http://api.madana.io/rest"
+)
+
+
+# Enter a context with an instance of the API client
+with madana_apiclient.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = node_service_api.NodeServiceApi(api_client)
+    ident = "ident_example" # str | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.kill_node(ident)
+        pprint(api_response)
+    except madana_apiclient.ApiException as e:
+        print("Exception when calling NodeServiceApi->kill_node: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ident** | **str**|  |
+
+### Return type
+
+**file_type**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **post_node_info**
 > file_type post_node_info()
 
@@ -150,33 +408,33 @@ with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = node_service_api.NodeServiceApi(api_client)
     body = JsonNodeInfo(
-        operating_system_uptime=3.14,
-        memory="memory_example",
-        cpu_physical_cores=1,
-        ipfs_info=JsonIPFSSystemInfo(
-            id="id_example",
-            swarm_connection="swarm_connection_example",
-            public_key="public_key_example",
-            protocol_version="protocol_version_example",
-            agent_version="agent_version_example",
-        ),
-        cpu_logical_count=1,
-        operating_system="operating_system_example",
-        cpu_frequency="cpu_frequency_example",
-        cpu_family="cpu_family_example",
-        hardware_firmware="hardware_firmware_example",
-        status="status_example",
-        cpu_model="cpu_model_example",
-        owner="owner_example",
-        connection_url="connection_url_example",
         processors=[
             "processors_example",
         ],
+        cpu_physical_cores=1,
         hardware_baseboard="hardware_baseboard_example",
+        connection_url="connection_url_example",
+        owner="owner_example",
+        memory="memory_example",
+        operating_system="operating_system_example",
+        hardware_firmware="hardware_firmware_example",
+        cpu_logical_count=1,
+        cpu_model="cpu_model_example",
+        status="status_example",
+        cpu_family="cpu_family_example",
+        operating_system_uptime=3.14,
+        cpu_frequency="cpu_frequency_example",
         public_key="public_key_example",
+        ipfs_info=JsonIPFSSystemInfo(
+            agent_version="agent_version_example",
+            swarm_connection="swarm_connection_example",
+            public_key="public_key_example",
+            protocol_version="protocol_version_example",
+            id="id_example",
+        ),
         sgx_info=JsonSGXInfo(
-            status="status_example",
             version="version_example",
+            status="status_example",
         ),
     ) # JsonNodeInfo |  (optional)
 
@@ -240,8 +498,8 @@ with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = node_service_api.NodeServiceApi(api_client)
     body = JsonNodeRunRequest(
-        cpu_count="cpu_count_example",
         subdomain="subdomain_example",
+        cpu_count="cpu_count_example",
     ) # JsonNodeRunRequest |  (optional)
 
     # example passing only required values which don't have defaults set
