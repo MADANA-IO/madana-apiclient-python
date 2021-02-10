@@ -33,7 +33,7 @@ Is used to upload and park the data till the AnalysisRequest gets processed
 import time
 import madana_apiclient
 from madana_apiclient.api import request_service_api
-from madana_apiclient.model.json_signed_data_utils import JsonSignedDataUtils
+from madana_apiclient.model.json_signed_data import JsonSignedData
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -48,11 +48,11 @@ with madana_apiclient.ApiClient() as api_client:
     api_instance = request_service_api.RequestServiceApi(api_client)
     uuid = "uuid_example" # str | 
     authorization = "Authorization_example" # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
-    body = JsonSignedDataUtils(
-        data="data_example",
+    body = JsonSignedData(
         signature="signature_example",
+        data="data_example",
         fingerpint="fingerpint_example",
-    ) # JsonSignedDataUtils |  (optional)
+    ) # JsonSignedData |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | **str**|  |
  **authorization** | **str**| Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c | [optional]
- **body** | [**JsonSignedDataUtils**](JsonSignedDataUtils.md)|  | [optional]
+ **body** | [**JsonSignedData**](JsonSignedData.md)|  | [optional]
 
 ### Return type
 
@@ -116,7 +116,7 @@ Endpoint is called from the Analysis Processing entity to submit the result
 import time
 import madana_apiclient
 from madana_apiclient.api import request_service_api
-from madana_apiclient.model.json_signed_data_utils import JsonSignedDataUtils
+from madana_apiclient.model.json_signed_data import JsonSignedData
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -131,11 +131,11 @@ with madana_apiclient.ApiClient() as api_client:
     api_instance = request_service_api.RequestServiceApi(api_client)
     uuid = "uuid_example" # str | 
     authorization = "Authorization_example" # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
-    body = JsonSignedDataUtils(
-        data="data_example",
+    body = JsonSignedData(
         signature="signature_example",
+        data="data_example",
         fingerpint="fingerpint_example",
-    ) # JsonSignedDataUtils |  (optional)
+    ) # JsonSignedData |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | **str**|  |
  **authorization** | **str**| Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c | [optional]
- **body** | [**JsonSignedDataUtils**](JsonSignedDataUtils.md)|  | [optional]
+ **body** | [**JsonSignedData**](JsonSignedData.md)|  | [optional]
 
 ### Return type
 
@@ -199,7 +199,7 @@ Endpoint used to create a new Analysis Request
 import time
 import madana_apiclient
 from madana_apiclient.api import request_service_api
-from madana_apiclient.model.json_signed_data_utils import JsonSignedDataUtils
+from madana_apiclient.model.json_signed_data import JsonSignedData
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -213,11 +213,11 @@ with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = request_service_api.RequestServiceApi(api_client)
     authorization = "Authorization_example" # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
-    body = JsonSignedDataUtils(
-        data="data_example",
+    body = JsonSignedData(
         signature="signature_example",
+        data="data_example",
         fingerpint="fingerpint_example",
-    ) # JsonSignedDataUtils |  (optional)
+    ) # JsonSignedData |  (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -234,7 +234,7 @@ with madana_apiclient.ApiClient() as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **authorization** | **str**| Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c | [optional]
- **body** | [**JsonSignedDataUtils**](JsonSignedDataUtils.md)|  | [optional]
+ **body** | [**JsonSignedData**](JsonSignedData.md)|  | [optional]
 
 ### Return type
 
@@ -476,7 +476,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_data**
-> JsonSignedDataUtils get_data(uuid)
+> JsonSignedData get_data(uuid)
 
 Is called from the APE to request all parked datasets.
 
@@ -488,7 +488,7 @@ Is called from the APE to request all parked datasets. Returns the transmitted d
 import time
 import madana_apiclient
 from madana_apiclient.api import request_service_api
-from madana_apiclient.model.json_signed_data_utils import JsonSignedDataUtils
+from madana_apiclient.model.json_signed_data import JsonSignedData
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -531,7 +531,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**JsonSignedDataUtils**](JsonSignedDataUtils.md)
+[**JsonSignedData**](JsonSignedData.md)
 
 ### Authorization
 
@@ -1002,7 +1002,7 @@ Endpoint is called from the Analysis Processing entity to submit the result
 import time
 import madana_apiclient
 from madana_apiclient.api import request_service_api
-from madana_apiclient.model.json_signed_data_utils import JsonSignedDataUtils
+from madana_apiclient.model.json_signed_data import JsonSignedData
 from pprint import pprint
 # Defining the host is optional and defaults to http://api.madana.io/rest
 # See configuration.py for a list of all supported configuration parameters.
@@ -1017,11 +1017,11 @@ with madana_apiclient.ApiClient() as api_client:
     api_instance = request_service_api.RequestServiceApi(api_client)
     uuid = "uuid_example" # str | 
     authorization = "Authorization_example" # str | Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c (optional)
-    body = JsonSignedDataUtils(
-        data="data_example",
+    body = JsonSignedData(
         signature="signature_example",
+        data="data_example",
         fingerpint="fingerpint_example",
-    ) # JsonSignedDataUtils |  (optional)
+    ) # JsonSignedData |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -1047,7 +1047,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | **str**|  |
  **authorization** | **str**| Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c | [optional]
- **body** | [**JsonSignedDataUtils**](JsonSignedDataUtils.md)|  | [optional]
+ **body** | [**JsonSignedData**](JsonSignedData.md)|  | [optional]
 
 ### Return type
 

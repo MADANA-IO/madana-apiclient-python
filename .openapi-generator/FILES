@@ -44,7 +44,6 @@ docs/JsonProcess.md
 docs/JsonRunConfig.md
 docs/JsonSGXInfo.md
 docs/JsonSignedData.md
-docs/JsonSignedDataUtils.md
 docs/JsonV1Event.md
 docs/JsonV1EventList.md
 docs/JsonV1EventSeries.md
@@ -157,7 +156,6 @@ madana_apiclient/model/json_process.py
 madana_apiclient/model/json_run_config.py
 madana_apiclient/model/json_sgx_info.py
 madana_apiclient/model/json_signed_data.py
-madana_apiclient/model/json_signed_data_utils.py
 madana_apiclient/model/json_v1_event.py
 madana_apiclient/model/json_v1_event_list.py
 madana_apiclient/model/json_v1_event_series.py
@@ -255,7 +253,6 @@ test/test_json_process.py
 test/test_json_run_config.py
 test/test_json_sgx_info.py
 test/test_json_signed_data.py
-test/test_json_signed_data_utils.py
 test/test_json_v1_event.py
 test/test_json_v1_event_list.py
 test/test_json_v1_event_series.py

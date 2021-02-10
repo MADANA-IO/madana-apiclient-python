@@ -43,8 +43,8 @@ with madana_apiclient.ApiClient() as api_client:
     uuid = "uuid_example" # str | 
     body = JsonSignedData(
         signature="signature_example",
-        fingerpint="fingerpint_example",
         data="data_example",
+        fingerpint="fingerpint_example",
     ) # JsonSignedData |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -186,34 +186,34 @@ with madana_apiclient.ApiClient() as api_client:
     api_instance = enclave_service_api.EnclaveServiceApi(api_client)
     uuid = "uuid_example" # str | 
     body = JsonNodeInfo(
+        sgx_info=JsonSGXInfo(
+            status="status_example",
+            version="version_example",
+        ),
+        cpu_physical_cores=1,
+        public_key="public_key_example",
+        memory="memory_example",
+        ipfs_info=JsonIPFSSystemInfo(
+            id="id_example",
+            swarm_connection="swarm_connection_example",
+            protocol_version="protocol_version_example",
+            public_key="public_key_example",
+            agent_version="agent_version_example",
+        ),
+        cpu_logical_count=1,
+        owner="owner_example",
+        hardware_baseboard="hardware_baseboard_example",
+        connection_url="connection_url_example",
+        hardware_firmware="hardware_firmware_example",
+        cpu_model="cpu_model_example",
+        cpu_frequency="cpu_frequency_example",
+        cpu_family="cpu_family_example",
         processors=[
             "processors_example",
         ],
-        cpu_physical_cores=1,
-        hardware_baseboard="hardware_baseboard_example",
-        connection_url="connection_url_example",
-        owner="owner_example",
-        memory="memory_example",
-        operating_system="operating_system_example",
-        hardware_firmware="hardware_firmware_example",
-        cpu_logical_count=1,
-        cpu_model="cpu_model_example",
         status="status_example",
-        cpu_family="cpu_family_example",
         operating_system_uptime=3.14,
-        cpu_frequency="cpu_frequency_example",
-        public_key="public_key_example",
-        ipfs_info=JsonIPFSSystemInfo(
-            agent_version="agent_version_example",
-            swarm_connection="swarm_connection_example",
-            public_key="public_key_example",
-            protocol_version="protocol_version_example",
-            id="id_example",
-        ),
-        sgx_info=JsonSGXInfo(
-            version="version_example",
-            status="status_example",
-        ),
+        operating_system="operating_system_example",
     ) # JsonNodeInfo |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -285,38 +285,12 @@ with madana_apiclient.ApiClient() as api_client:
     api_instance = enclave_service_api.EnclaveServiceApi(api_client)
     uuid = "uuid_example" # str | 
     body = JsonEnclaveRunningAttestation(
-        node_info=JsonNodeInfo(
-            processors=[
-                "processors_example",
-            ],
-            cpu_physical_cores=1,
-            hardware_baseboard="hardware_baseboard_example",
-            connection_url="connection_url_example",
-            owner="owner_example",
-            memory="memory_example",
-            operating_system="operating_system_example",
-            hardware_firmware="hardware_firmware_example",
-            cpu_logical_count=1,
-            cpu_model="cpu_model_example",
-            status="status_example",
-            cpu_family="cpu_family_example",
-            operating_system_uptime=3.14,
-            cpu_frequency="cpu_frequency_example",
-            public_key="public_key_example",
-            ipfs_info=JsonIPFSSystemInfo(
-                agent_version="agent_version_example",
-                swarm_connection="swarm_connection_example",
-                public_key="public_key_example",
-                protocol_version="protocol_version_example",
-                id="id_example",
-            ),
-            sgx_info=JsonSGXInfo(
-                version="version_example",
-                status="status_example",
-            ),
-        ),
         enclave_process=JsonEnclaveProcess(
+            internal_remote_control_server="internal_remote_control_server_example",
+            internal_wireguard_server="internal_wireguard_server_example",
+            enclave_ident="enclave_ident_example",
             attestation_server="attestation_server_example",
+            console_output="console_output_example",
             port_mapping={
                 "key": "key_example",
             },
@@ -327,63 +301,89 @@ with madana_apiclient.ApiClient() as api_client:
                     protocol="protocol_example",
                 ),
             ],
+            remote_control_server="remote_control_server_example",
+            signer_ident="signer_ident_example",
+            wg_interface=JsonWireguardInterface(),
             startup_time="startup_time_example",
-            status="status_example",
-            internal_ident="internal_ident_example",
-            startup_cmd="startup_cmd_example",
-            enclave_ident="enclave_ident_example",
+            internal_attesation_server="internal_attesation_server_example",
+            kubernetes_enclave=JsonKubernetesEnclave(),
             environment=JsonEnvironment(
-                roothash="roothash_example",
-                root_hash_offset="root_hash_offset_example",
                 ipfs_hash="ipfs_hash_example",
+                packages=[
+                    "packages_example",
+                ],
+                root_hash_offset="root_hash_offset_example",
+                size="size_example",
                 description="description_example",
-                name="name_example",
+                roothash="roothash_example",
                 default_run_configuration=JsonRunConfig(
-                    args=[
-                        "args_example",
-                    ],
                     run="run_example",
                     disk_config=[
                         JsonDiskConfig(
                             readonly=True,
+                            roothash="roothash_example",
                             disk="disk_example",
                             roothash_offset=1,
-                            roothash="roothash_example",
                         ),
+                    ],
+                    args=[
+                        "args_example",
                     ],
                     environment={
                         "key": "key_example",
                     },
                 ),
-                uuid="uuid_example",
-                packages=[
-                    "packages_example",
-                ],
+                published=True,
                 content=[
                     "content_example",
                 ],
-                size="size_example",
-                published=True,
+                name="name_example",
+                uuid="uuid_example",
             ),
+            internal_ident="internal_ident_example",
+            startup_cmd="startup_cmd_example",
+            enclave_inputstream={},
+            ending_time="ending_time_example",
+            wireguard_public_key="wireguard_public_key_example",
             public_ident="public_ident_example",
-            console_output="console_output_example",
-            internal_wireguard_server="internal_wireguard_server_example",
-            internal_attesation_server="internal_attesation_server_example",
+            wireguard_server="wireguard_server_example",
             process=JsonProcess(
-                output_stream={},
                 alive=True,
                 input_stream={},
                 error_stream={},
+                output_stream={},
             ),
-            internal_remote_control_server="internal_remote_control_server_example",
-            signer_ident="signer_ident_example",
-            wg_interface=JsonWireguardInterface(),
-            wireguard_server="wireguard_server_example",
-            remote_control_server="remote_control_server_example",
-            wireguard_public_key="wireguard_public_key_example",
-            ending_time="ending_time_example",
-            kubernetes_enclave=JsonKubernetesEnclave(),
-            enclave_inputstream={},
+            status="status_example",
+        ),
+        node_info=JsonNodeInfo(
+            sgx_info=JsonSGXInfo(
+                status="status_example",
+                version="version_example",
+            ),
+            cpu_physical_cores=1,
+            public_key="public_key_example",
+            memory="memory_example",
+            ipfs_info=JsonIPFSSystemInfo(
+                id="id_example",
+                swarm_connection="swarm_connection_example",
+                protocol_version="protocol_version_example",
+                public_key="public_key_example",
+                agent_version="agent_version_example",
+            ),
+            cpu_logical_count=1,
+            owner="owner_example",
+            hardware_baseboard="hardware_baseboard_example",
+            connection_url="connection_url_example",
+            hardware_firmware="hardware_firmware_example",
+            cpu_model="cpu_model_example",
+            cpu_frequency="cpu_frequency_example",
+            cpu_family="cpu_family_example",
+            processors=[
+                "processors_example",
+            ],
+            status="status_example",
+            operating_system_uptime=3.14,
+            operating_system="operating_system_example",
         ),
     ) # JsonEnclaveRunningAttestation |  (optional)
 
@@ -455,7 +455,6 @@ with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = enclave_service_api.EnclaveServiceApi(api_client)
     body = JsonEnclaveRunRequest(
-        using_default_run_config=True,
         ports=[
             JsonEnclavePort(
                 port="port_example",
@@ -464,6 +463,7 @@ with madana_apiclient.ApiClient() as api_client:
             ),
         ],
         environment_uuid="environment_uuid_example",
+        using_default_run_config=True,
         enclave_execution_type="enclave_execution_type_example",
         wireguard_public_key="wireguard_public_key_example",
     ) # JsonEnclaveRunRequest |  (optional)

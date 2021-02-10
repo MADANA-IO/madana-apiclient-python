@@ -43,7 +43,6 @@ from madana_apiclient.model.json_process import JsonProcess
 from madana_apiclient.model.json_run_config import JsonRunConfig
 from madana_apiclient.model.json_sgx_info import JsonSGXInfo
 from madana_apiclient.model.json_signed_data import JsonSignedData
-from madana_apiclient.model.json_signed_data_utils import JsonSignedDataUtils
 from madana_apiclient.model.json_v1_event import JsonV1Event
 from madana_apiclient.model.json_v1_event_list import JsonV1EventList
 from madana_apiclient.model.json_v1_event_series import JsonV1EventSeries
