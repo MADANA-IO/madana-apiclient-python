@@ -469,34 +469,34 @@ with madana_apiclient.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = node_service_api.NodeServiceApi(api_client)
     body = JsonNodeInfo(
-        processors=[
-            "processors_example",
-        ],
-        cpu_family="cpu_family_example",
-        owner="owner_example",
-        status="status_example",
-        cpu_frequency="cpu_frequency_example",
-        hardware_firmware="hardware_firmware_example",
-        memory="memory_example",
-        operating_system_uptime=3.14,
         ipfs_info=JsonIPFSSystemInfo(
-            protocol_version="protocol_version_example",
-            agent_version="agent_version_example",
-            swarm_connection="swarm_connection_example",
             public_key="public_key_example",
             id="id_example",
+            protocol_version="protocol_version_example",
+            swarm_connection="swarm_connection_example",
+            agent_version="agent_version_example",
         ),
+        cpu_logical_count=1,
+        hardware_firmware="hardware_firmware_example",
+        public_key="public_key_example",
+        connection_url="connection_url_example",
+        hardware_baseboard="hardware_baseboard_example",
+        cpu_family="cpu_family_example",
+        operating_system_uptime=3.14,
         sgx_info=JsonSGXInfo(
             status="status_example",
             version="version_example",
         ),
         cpu_model="cpu_model_example",
-        connection_url="connection_url_example",
-        public_key="public_key_example",
+        memory="memory_example",
         operating_system="operating_system_example",
+        status="status_example",
+        cpu_frequency="cpu_frequency_example",
+        processors=[
+            "processors_example",
+        ],
+        owner="owner_example",
         cpu_physical_cores=1,
-        hardware_baseboard="hardware_baseboard_example",
-        cpu_logical_count=1,
     ) # JsonNodeInfo |  (optional)
 
     # example passing only required values which don't have defaults set

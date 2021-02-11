@@ -4,8 +4,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**run** | **str** |  | [optional] 
 **args** | **[str]** |  | [optional] 
+**run** | **str** |  | [optional] 
 **disk_config** | [**[JsonDiskConfig]**](JsonDiskConfig.md) |  | [optional] 
 **environment** | **{str: (str,)}** |  | [optional] 
 
